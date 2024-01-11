@@ -1,0 +1,17 @@
+.cards-container{
+ display: flex;
+ justify-content: space-around;
+ margin: 0 0  8rem 0 ;
+ background-color: rgba(128, 128, 128, 0.028);
+ padding: 4rem;
+}
+.card{
+ width: 25%;
+ padding: 3rem 2rem;
+ border-radius: 2px;
+ box-shadow: 1px 1px 1px 1px rgb(190, 188, 188);
+}
+.card h3{
+ margin-bottom: 0.5rem;
+ text-align: center;
+}

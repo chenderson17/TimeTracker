@@ -17,7 +17,7 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay}){
 
  return(
     <header>
-      <h1>TimeTracker</h1>
+      <h1> <a>TimeTracker</a></h1>
       <nav>
         <ul className='navbar'>
          <li>
