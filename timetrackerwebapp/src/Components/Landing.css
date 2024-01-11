@@ -1,0 +1,17 @@
+.hero-img-container{
+ margin:0 auto;
+ width: 750px;
+ overflow: hidden;
+}
+.hero-img{
+ width: 100%;
+}
+.hero-header{
+ margin:4rem 12rem;
+ z-index: -1;
+ font-size: 3rem;
+}
+.bold{
+ font-weight: 900;
+ color:rgba(255, 85, 0, 0.671);
+}

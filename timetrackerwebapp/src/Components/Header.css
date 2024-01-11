@@ -1,0 +1,28 @@
+
+header{
+ display: flex;
+ align-items: center;
+ justify-content: space-around
+ ;
+ margin:0.5rem 0;
+}
+
+li{
+ list-style: none;
+ display: inline;
+ margin:0 2rem;
+}
+
+
+
+
+
+
+.header-btns{
+ border:none;
+ background-color: none;
+ margin:0 1em;
+ width:10rem;
+ padding:1rem;
+ border-radius: 5px;
+}
