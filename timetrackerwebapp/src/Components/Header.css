@@ -4,13 +4,18 @@ header{
  align-items: center;
  justify-content: space-around
  ;
- margin:0.5rem 0;
+ padding: 2rem;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.097);
 }
 
-li{
+.navbar li{
  list-style: none;
  display: inline;
  margin:0 2rem;
+ transition:100ms ease-in linear;
+}
+.navbar li:hover{
+ color:rgba(255, 85, 0, 0.671);
 }
 
 
@@ -26,5 +31,11 @@ li{
  padding:1rem;
  border-radius: 5px;
  font-size: 0.9em;
+ transition: 100ms ease-in;
 
+}
+.header-btns:hover{
+ background-color:rgba(255, 85, 0, 0.671);
+ color: rgb(255,255,255);
+ font-size: 800;
 }
