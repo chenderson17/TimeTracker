@@ -1,0 +1,9 @@
+.contact-header{
+ text-align: center;
+ font-size: 2em;
+}
+.contact-section form{
+ display: grid;
+ grid-template-rows:1fr 1fr 1fr 1fr;
+ grid-template-columns:1fr 1fr 1fr 1fr;
+}

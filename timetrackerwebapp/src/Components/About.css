@@ -1,11 +1,11 @@
 .home-about h3{
- font-size: 2em;
+ font-size: 1.5em;
 }
 .home-about h4{
- font-size:2em;
+ font-size:1.5em;
 }
 .home-about p{
- font-size: 1.3em;
+ font-size: 1.1em;
  line-height: 1.2em;
 }
 
@@ -23,7 +23,7 @@
 }
 .about-us-header,.core-principles h3{
  text-align: center;
- font-size: 2.5em;
+ font-size: 2em;
  letter-spacing: 0.5px;
 }
 .principles-list li{

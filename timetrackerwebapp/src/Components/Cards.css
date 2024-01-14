@@ -1,9 +1,17 @@
+.cards-section{
+ background-color: rgba(128, 128, 128, 0.028);
+ padding: 2rem;
+}
+.cards-header{
+ font-size: 2rem;
+ letter-spacing: 1px;
+ text-transform:capitalize;
+}
 .cards-container{
  display: flex;
  justify-content: space-around;
- margin: 0 0  8rem 0 ;
- background-color: rgba(128, 128, 128, 0.028);
- padding: 4rem;
+ margin: 0 0  4rem 0 ;
+ padding: 2rem;
  color:rgb(50,50,50);
 }
 .card{
@@ -11,6 +19,9 @@
  padding: 3rem 2rem;
  border-radius: 2px;
  box-shadow: 1px 1px 1px 1px rgb(190, 188, 188);
+ text-align: center;
+}
+.cards-header{
  text-align: center;
 }
 .card h3{

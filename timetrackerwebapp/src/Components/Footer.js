@@ -5,7 +5,7 @@ export default function Footer(){
   return(
  <section className="footer">
   <div class="footer-contact">
-   <h3>Contact Us</h3>
+   <h3>Contact</h3>
     <h3>Adress</h3>
     <address>5555 NE LN Way, 0000 City,State</address>
     <h3>Phone</h3>

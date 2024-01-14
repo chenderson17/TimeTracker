@@ -2,6 +2,9 @@ import './Cards.css';
 import 'boxicons';
 export default function Cards(){
  return(
+  <>
+  <section className="cards-section">
+   <h2 className="cards-header">Using our services you can expect...</h2>
  <div className="cards-container">
  <div className="scheduling card">
   <h3>Scheduling</h3>
@@ -19,5 +22,7 @@ export default function Cards(){
   <p>Make data-driven decisions with our powerful analytics platform. Gain valuable insights into performance, project efficiency, and resource allocation. Track key metrics, identify trends, and optimize strategies for improved outcomes. Elevate your decision-making process and drive success through informed, analytics-driven actions.</p>
  </div>
  </div>
+ </section>
+ </>
  )
 }

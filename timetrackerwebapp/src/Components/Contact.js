@@ -1,7 +1,8 @@
+import './contact.css';
 export default function Contact(){
  return(
   <section className='contact-section'>
-   <h2>Contact Us</h2>
+   <h2 className="contact-header">Contact Us</h2>
    <form>
     <label name='fname'>First Name</label>
     <input type='text' name='fname' placeholder="First Name"/>
