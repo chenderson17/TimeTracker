@@ -27,6 +27,9 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay}){
           <a className="navlink">About</a>
          </li>
          <li>
+          <a className="navlink">Pricing</a>
+         </li>
+         <li>
           <a className="navlink">Contact Us</a>
          </li>
          <li>
