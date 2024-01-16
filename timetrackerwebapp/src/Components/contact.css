@@ -2,8 +2,43 @@
  text-align: center;
  font-size: 2em;
 }
+.contact-section input, .contact-section textarea {
+ display: block;
+}
 .contact-section form{
- display: grid;
- grid-template-rows:1fr 1fr 1fr 1fr;
- grid-template-columns:1fr 1fr 1fr 1fr;
+background-color: palegoldenrod;
+display: grid;
+grid-template-rows: repeat(3,1fr);
+grid-template-columns: repeat(2,0.4fr);
+justify-content: center;
+}
+.fname-container{
+ grid-row-start: 1;
+ background-color:aliceblue;
+}
+.lname-container{
+ grid-row-start: 1;
+ grid-column-start: 2;
+ background-color:antiquewhite;
+}
+.email-container{
+ grid-row-start: 2;
+ grid-column-start: 1;
+ grid-column-end: 2;
+ background-color: aqua;
+}
+.phone-container{
+ grid-row-start:2;
+ grid-column-start: 2;
+ background-color:aquamarine;
+}
+.contact-message-container{
+ grid-row-start:3;
+ grid-column-start:1;
+ grid-column-end:3;
+ background-color: azure;
+}
+.contact-message-container textarea{
+ width:100%;
+ resize: none;
 }
