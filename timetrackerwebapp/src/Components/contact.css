@@ -1,3 +1,7 @@
+
+.contact-section{
+ padding:1rem;
+}
 .contact-header{
  text-align: center;
  font-size: 2em;
@@ -9,7 +13,7 @@
 
 .contact-section form{
 display: grid;
-grid-template-rows: repeat(3,0.5fr);
+grid-template-rows: repeat(4,0.5fr);
 grid-template-columns: repeat(2,0.3fr);
 justify-content: center;
 padding:2rem;
@@ -63,6 +67,31 @@ padding:2rem;
 .contact-message-container textarea:focus{
  outline:none;
 }
+.send-btn-container{
+ grid-row-start: 4;
+ grid-column-start:1;
+ grid-column-end:3;
+}
+.send-btn-container button{
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ position: relative;
+ left:14rem;
+ top:1rem;
+ width: 15rem;
+ padding:1rem;
+ background-color: rgba(255, 85, 0, 0.671);
+ color:rgb(255,255,255);
+ border: none;
+  border-radius: 2px;
+  font-size: 0.9em;
+  transition: 250ms ease;
+}
+.send-btn-container button:hover{
+ background-color:rgba(255, 85, 0, 0.871);
+}
+
 .fname-container, .lname-container,.email-container,.phone-container,.contact-message-container{
  padding:1rem;
 }

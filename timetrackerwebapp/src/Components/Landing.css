@@ -3,10 +3,10 @@
 }
 .hero-img-container{
  position: relative;
- left:30rem;
- bottom: 2rem;
+ left:26rem;
+ bottom: 5rem;
  overflow: hidden;
- width:580px;
+ width:680px;
  z-index: -1;
 }
 .hero-img{

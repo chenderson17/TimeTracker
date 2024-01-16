@@ -30,6 +30,9 @@ export default function Contact(){
     <label name="contact-message">Message</label>
     <textarea name="contact-message" cols="30" rows="8" maxLength={250}></textarea>
     </div>
+    <div className="send-btn-container">
+     <button className="send-btn">Send</button>
+    </div>
    </form>
   </section>
  )
