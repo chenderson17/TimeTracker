@@ -5,8 +5,10 @@ export default function Contact(){
    <h2 className="contact-header">Contact Us</h2>
    <form>
     <div className="fname-container">
+     <div className="contact-input-content">
     <label name='fname'>First Name</label>
     <input type='text' name='fname' placeholder="First Name"/>
+    </div>
     </div>
 
     <div className="lname-container">
@@ -26,7 +28,7 @@ export default function Contact(){
 
     <div className="contact-message-container">
     <label name="contact-message">Message</label>
-    <textarea name="contact-message" cols="30" rows="5"></textarea>
+    <textarea name="contact-message" cols="30" rows="8" maxLength={250}></textarea>
     </div>
    </form>
   </section>
