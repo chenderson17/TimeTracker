@@ -1,5 +1,14 @@
 import './contact.css';
+import React from 'react';
+import { useState } from 'react';
 export default function Contact(){
+ const[animate, setAnimation] = useState("");
+ const handleHover = ()=>{
+  setAnimation("tada");
+ }
+ const handleLeave = ()=>{
+  setAnimation("");
+ }
  return(
   <section className='contact-section'>
    <h2 className="contact-header">Contact Us</h2>
@@ -31,7 +40,7 @@ export default function Contact(){
     <textarea name="contact-message" cols="30" rows="8" maxLength={250}></textarea>
     </div>
     <div className="send-btn-container">
-     <button className="send-btn">Send</button>
+     <button className="send-btn" onMouseOver={handleHover}onMouseLeave={handleLeave}><span className="send-btn-text">Send</span><box-icon name='send' color="white" size="sm" animation={animate}  ></box-icon></button>
     </div>
    </form>
   </section>

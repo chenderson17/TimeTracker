@@ -73,20 +73,22 @@ padding:2rem;
  grid-column-end:3;
 }
 .send-btn-container button{
- align-items: center;
+ display: flex;
  justify-content: center;
- text-align: center;
  position: relative;
  left:14rem;
  top:1rem;
  width: 15rem;
  padding:1rem;
- background-color: rgba(255, 85, 0, 0.671);
+ background-color: rgba(255, 85, 0, 0.762);
  color:rgb(255,255,255);
  border: none;
-  border-radius: 2px;
-  font-size: 0.9em;
-  transition: 250ms ease;
+ border-radius: 2px;
+ font-size: 1.30em;
+ transition: 250ms ease;
+}
+.send-btn-text{
+ margin-right: 0.5rem;
 }
 .send-btn-container button:hover{
  background-color:rgba(255, 85, 0, 0.871);
