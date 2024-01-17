@@ -3,6 +3,7 @@ import './About.css';
 export default function About(){
  return(
   <div className="home-about">
+    <a id="about"></a>
   <h2 className="about-us-header">About Us</h2>
    <section className = 'our-start'>
     <h3>Our Start</h3>

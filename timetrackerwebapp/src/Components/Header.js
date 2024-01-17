@@ -17,20 +17,20 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay}){
 
  return(
     <header>
-      <h1> <a>TimeTracker</a></h1>
+      <h1><a href="/">TimeTracker</a></h1>
       <nav>
         <ul className='navbar'>
          <li>
-          <a className="navlink">Home</a>
+          <a href="/" className="navlink">Home</a>
          </li>
          <li>
-          <a className="navlink">About</a>
+          <a href="#about" className="navlink">About</a>
          </li>
          <li>
           <a className="navlink">Pricing</a>
          </li>
          <li>
-          <a className="navlink">Contact Us</a>
+          <a href="#contact" className="navlink">Contact</a>
          </li>
          <li>
           {signIn()}

@@ -11,6 +11,7 @@ export default function Contact(){
  }
  return(
   <section className='contact-section'>
+   <a id ="contact"></a>
    <h2 className="contact-header">Contact Us</h2>
    <form>
     <div className="fname-container">

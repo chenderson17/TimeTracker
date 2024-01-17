@@ -33,16 +33,16 @@ export default function Footer(){
     <h3>Links</h3>
      <ul className='footer-navbar'>
          <li>
-          <a className="navlink">Home</a>
+          <a href="/" className="navlink">Home</a>
          </li>
          <li>
-          <a className="navlink">About</a>
+          <a href="#about" className="navlink">About</a>
          </li>
          <li>
           <a className="navlink">Pricing</a>
          </li>
          <li>
-          <a className="navlink">Contact Us</a>
+          <a href="#contact" className="navlink">Contact</a>
          </li>
     </ul>
     </div>
