@@ -7,10 +7,11 @@
   outline: none;
 }
 body{
-  font-family:sans-serif;
+  font-family:'Roboto', sans-serif;
 }
 button{
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
 }
 a{
   cursor: pointer;
