@@ -22,7 +22,9 @@ export default function Footer(){
       <a href="/">
     <box-icon type='logo' name='facebook' color="white" size="md"></box-icon>
     </a>
+    <a href="/">
     <box-icon name='instagram' type='logo' color="white" size="md" ></box-icon>
+    </a>
     </div>
   </div>
 
