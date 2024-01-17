@@ -14,14 +14,17 @@
 .footer h3{
  margin-bottom:0.5rem;
 }
-
 .footer-contact{
- display: flex;
+  display: flex;
   flex-direction: column;
-  
   justify-content: center;
   align-items: center;
- 
+}
+.footer-contact-subheader{
+ font-weight: 600;
+}
+.footer-contact address{
+ margin-bottom: 0.5rem;
 }
 
 .nav-summary{
@@ -32,6 +35,9 @@
  justify-content: center;
  align-items: center;
  
+}
+.nav-summary ul{
+ list-style:circle;
 }
 .nav-summary ul li a{
  text-decoration: underline;

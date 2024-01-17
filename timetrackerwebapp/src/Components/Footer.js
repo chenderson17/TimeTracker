@@ -7,10 +7,11 @@ export default function Footer(){
   <div class="footer-contact">
     <div>
    <h3>Get In Touch</h3>
-    <p>Address</p>
+    <p className="footer-contact-subheader">Address</p>
     <address>5555 NE LN Way, 0000 City,State</address>
-    <p>Phone</p>
-    <p>(555)-555-5555</p>
+
+    <p className="footer-contact-subheader">Phone</p>
+    <a href="tel:+">(555)-555-5555</a>
     </div>
   </div>
   <div className="footer-socials">
