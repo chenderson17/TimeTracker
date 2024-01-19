@@ -2,7 +2,6 @@ import React from 'react';
 import './Header.css';
 import {useState} from 'react'
 export default function Header({signUpBtnDisplay,signInBtnDisplay}){
- console.log(signInBtnDisplay);
   function signIn() {
     if (signInBtnDisplay) {
       return <button className="signUpBtn-header header-btns">Sign In</button>;
@@ -24,13 +23,13 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay}){
           <a href="/" className="navlink">Home</a>
          </li>
          <li>
-          <a href="#about" className="navlink">About</a>
+          <a href="/#about" className="navlink">About</a>
          </li>
          <li>
-          <a className="navlink">Pricing</a>
+          <a href="/pricing" className="navlink">Pricing</a>
          </li>
          <li>
-          <a href="#contact" className="navlink">Contact</a>
+          <a href="/#contact" className="navlink">Contact</a>
          </li>
          <li>
           {signIn()}
