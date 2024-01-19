@@ -1,6 +1,6 @@
 .cards-section{
  background-color: rgba(128, 128, 128, 0.028);
- padding: 2rem;
+ padding: 3.2rem;
 }
 .cards-header{
  font-size: 2rem;
@@ -10,7 +10,7 @@
 .cards-container{
  display: flex;
  justify-content: space-around;
- margin: 0 0  4rem 0 ;
+ margin: 0 0  0rem 0 ;
  padding: 2rem;
  color:rgb(50,50,50);
 }

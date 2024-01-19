@@ -7,6 +7,10 @@ header{
  padding: 2rem;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.097);
 }
+header a {
+  text-decoration: none;
+  color:rgb(0,0,0);
+}
 
 .navbar li{
  list-style: none;
@@ -14,7 +18,7 @@ header{
  margin:0 2rem;
  transition:100ms ease-in linear;
 }
-.navbar li:hover{
+.navbar a:hover{
  color:rgba(255, 85, 0, 0.671);
 }
 

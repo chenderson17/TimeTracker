@@ -1,20 +1,17 @@
-import Header from './Components/Header.js';
+import React from 'react';
 import './App.css';
-import Landing from './Components/Landing.js';
-import Cards from './Components/Cards.js';
-import About from './Components/About.js';
-import Footer from './Components/Footer.js';
-import Contact from './Components/Contact.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Components/Home.js'
+import Pricing from './Components/Pricing.js';
+
 function App() {
   return (
-    <>
-    <Header signUpBtnDisplay={true} signInBtnDisplay={true} />
-    <Landing />
-    <Cards />
-    <About />
-    <Contact />
-    <Footer />
-    </>
+   <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pricing" element={<Pricing/>} />
+      </Routes>
+    </Router>
   );
 }
 

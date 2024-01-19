@@ -1,9 +1,99 @@
+
+.contact-section{
+ padding:1rem;
+}
 .contact-header{
  text-align: center;
  font-size: 2em;
+ margin-top:2rem;
 }
+.contact-section input, .contact-section textarea {
+ display: block;
+}
+
 .contact-section form{
- display: grid;
- grid-template-rows:1fr 1fr 1fr 1fr;
- grid-template-columns:1fr 1fr 1fr 1fr;
+display: grid;
+grid-template-rows: repeat(4,0.5fr);
+grid-template-columns: repeat(2,0.3fr);
+justify-content: center;
+padding:2rem;
+}
+.contact-section form input{
+ width:20rem;
+ margin-top:0.5rem;
+ padding:0.8rem;
+ border:1px solid rgb(0, 0, 0);
+ border-radius:4px;
+}
+.contact-section label{
+ font-size: 1.1em;
+}
+.fname-container{
+ grid-row-start: 1;
+;
+ padding: 1rem;
+}
+
+.lname-container{
+ grid-row-start: 1;
+ grid-column-start: 2;
+
+}
+.email-container{
+ grid-row-start: 2;
+ grid-column-start: 1;
+ grid-column-end: 2;
+ 
+}
+.phone-container{
+ grid-row-start:2;
+ grid-column-start: 2;
+
+}
+.contact-message-container{
+ grid-row-start:3;
+ grid-column-start:1;
+ grid-column-end:3;
+
+}
+.contact-message-container textarea{
+ width:100%;
+ padding: 1rem;
+ font-size: 1rem;
+ resize: none;
+ margin-top: 0.5rem;
+ font-family:sans-serif;
+}
+.contact-message-container textarea:focus{
+ outline:none;
+}
+.send-btn-container{
+ grid-row-start: 4;
+ grid-column-start:1;
+ grid-column-end:3;
+}
+.send-btn-container button{
+ display: flex;
+ justify-content: center;
+ position: relative;
+ left:14rem;
+ top:1rem;
+ width: 15rem;
+ padding:1rem;
+ background-color: rgba(255, 85, 0, 0.762);
+ color:rgb(255,255,255);
+ border: none;
+ border-radius: 2px;
+ font-size: 1.30em;
+ transition: 250ms ease;
+}
+.send-btn-text{
+ margin-right: 0.5rem;
+}
+.send-btn-container button:hover{
+ background-color:rgba(255, 85, 0, 0.871);
+}
+
+.fname-container, .lname-container,.email-container,.phone-container,.contact-message-container{
+ padding:1rem;
 }
