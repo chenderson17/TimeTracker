@@ -1,6 +1,7 @@
 
 .contact-section{
  padding:1rem;
+
 }
 .contact-header{
  text-align: center;
@@ -17,6 +18,7 @@ grid-template-rows: repeat(4,0.5fr);
 grid-template-columns: repeat(2,0.3fr);
 justify-content: center;
 padding:2rem;
+
 }
 .contact-section form input{
  width:20rem;
@@ -75,9 +77,7 @@ padding:2rem;
 .send-btn-container button{
  display: flex;
  justify-content: center;
- position: relative;
- left:14rem;
- top:1rem;
+margin: 0 auto;
  width: 15rem;
  padding:1rem;
  background-color: rgba(255, 85, 0, 0.762);
