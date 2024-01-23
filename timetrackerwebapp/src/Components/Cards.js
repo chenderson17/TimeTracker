@@ -4,7 +4,7 @@ export default function Cards(){
  return(
   <>
   <section className="cards-section">
-   <h2 className="cards-header">Using our services you can expect...</h2>
+   <h2 className="cards-header">Services</h2>
  <div className="cards-container">
  <div className="scheduling card">
   <h3>Scheduling</h3>

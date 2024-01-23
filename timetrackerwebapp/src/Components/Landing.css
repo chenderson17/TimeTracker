@@ -2,21 +2,19 @@
 
 }
 .hero-img-container{
- position: relative;
- left:28rem;
- bottom: 2rem;
  overflow: hidden;
- width:570px;
+ margin:0 auto;
+ width:50rem;
  z-index: -1;
 }
 .hero-img{
  width: 100%;
 }
 .hero-header{
- margin-top:2.5rem;
- margin-left: 7.5rem;
+ margin-top:3.2rem;
+ margin-left: 15rem;
  z-index:1;
- font-size: 2.5em;
+ font-size: 3.2em;
 }
 .bold{
  font-weight: 900;
