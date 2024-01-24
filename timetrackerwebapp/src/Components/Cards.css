@@ -10,7 +10,7 @@
 .cards-container{
  display: flex;
  justify-content: center;
- gap:3.5rem;
+ gap:2.0rem;
  padding: 2rem;
  color:rgb(50,50,50);
 }
