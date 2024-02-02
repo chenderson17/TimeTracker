@@ -15,7 +15,7 @@ export default function Contact(){
    <div className='contact-header-container'>
    <h2 className="contact-header">Contact Us</h2>
    </div>
-   <form>
+   <form action="mailto:carhenderson99@gmail.com">
     <div className='name-container'>
     <div className="fname-container">
      <div className="contact-input-content">

@@ -87,7 +87,8 @@ grid-template-columns: 1fr;
 .send-btn-container button{
  display: flex;
  justify-content: center;
-margin: 0 auto;
+ align-items: center;
+ margin: 0 auto;
  width: 15rem;
  padding:1rem;
  background-color: rgba(255, 85, 0, 0.762);

@@ -8,12 +8,17 @@
   outline: none;
 }
 body{
-  font-family:'Roboto', sans-serif;
+  color:rgb(14,17,17);
+  font-family:'Poppins', sans-serif
+ 
 }
 button{
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
+  font-family:'Poppins', sans-serif
+
 }
+
 a{
   cursor: pointer;
+  font-family:'Poppins', sans-serif
 }
