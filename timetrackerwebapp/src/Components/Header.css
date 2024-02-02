@@ -7,7 +7,7 @@ header{
  font-family: 'Poppins', sans-serif;
  padding: 2rem;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.097);
-
+  width: 100%;
 }
 h1{
   font-weight: 600;

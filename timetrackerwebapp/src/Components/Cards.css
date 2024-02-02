@@ -25,7 +25,8 @@
 .cards-header{
  text-align: center;
  font-family: 'Poppins', sans-serif;
- font-weight: 500;
+ font-weight: bold;
+
 }
 .card h3{
  margin-bottom: 0.5rem;
