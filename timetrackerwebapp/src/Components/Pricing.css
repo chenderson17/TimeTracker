@@ -1,0 +1,105 @@
+
+.price-top{
+
+}
+.pricing-header{
+    text-align: center;
+    font-size:2.5em;
+    font-weight: 400;
+    padding: 2rem;
+
+}
+.price-header-span{
+    font-weight: 600;
+    color:rgb(3, 3, 31);
+}
+.pricing-radio{
+   margin:1rem;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   font-weight: 600;
+   padding:1.5rem;
+   gap:2rem;
+   border:none;
+}
+.pricing-radio input[type='radio']{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(3, 3, 31); /* Change this color as needed */
+    outline: none;
+    transition: border 0.3s;
+}
+input[type="radio"]:checked {
+    background-color: rgb(3, 3, 31); /* Change this color as needed */
+}
+.price-radio-container{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+.pricing-radio label{
+    font-size:1.8em;
+}
+
+.pricing-cards{
+    display: flex;
+    justify-content: space-around;
+    margin:2rem 2rem;
+    gap:2.5rem;
+    padding: 4rem;
+
+    
+}
+.price-card{
+    border: 1px solid rgba(0, 0, 0, 0.377);
+    width: 25%;
+    padding: 2rem;
+    display: grid;
+    align-items: center;
+    border-radius: 4px;
+    
+}
+
+.price-card h3{
+    font-size: 1.9em;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    border-bottom:4px solid black;
+}
+.price-card h4{
+    text-align: center;
+    color:rgb(128, 128, 133);
+    font-size: 1.3em;
+}
+.price-card ul{
+ text-align: center;
+ list-style-type: none;
+}
+.price-card li{
+    margin:1.5rem 0;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.price-get-started-btn{
+    width: 100%;
+    padding: 1rem;
+    border:none;
+    background-color:rgba(255, 85, 0, 0.849);
+    color:rgb(255,255,255);
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size:1.0em;
+}
+.free-plan-btn{
+    background-color:rgba(128, 128, 128, 0.829) ;
+}

@@ -1,4 +1,7 @@
 .landing-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .hero-img-container{
  overflow: hidden;
@@ -13,11 +16,11 @@
 }
 .hero-header{
  margin-top:2.0rem;
- margin-left: 20%;
  z-index:1;
  font-family:'Poppins', sans-serif;
  font-weight: 500;
  font-size: 3.0em;
+ width: 50%;
 }
 .bold{
     font-weight: 600;
