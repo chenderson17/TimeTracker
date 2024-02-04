@@ -1,6 +1,17 @@
 
 .price-top{
+    
 
+}
+.price-top fieldset{
+    width: 25%;
+    margin: 0 auto;
+}
+.price-top p{
+    color:rgb(3,3,31);
+    font-size: 2em;
+    font-weight: 600;
+    display: none;
 }
 .pricing-header{
     text-align: center;
@@ -46,20 +57,18 @@ input[type="radio"]:checked {
 .pricing-radio label{
     font-size:1.8em;
 }
-
 .pricing-cards{
     display: flex;
     justify-content: space-around;
-    margin:2rem 2rem;
     gap:2.5rem;
     padding: 4rem;
-
+    margin-bottom: 20rem;
     
 }
 .price-card{
     border: 1px solid rgba(0, 0, 0, 0.377);
     width: 25%;
-    padding: 2rem;
+    padding: 5rem 2rem;
     display: grid;
     align-items: center;
     border-radius: 4px;
@@ -99,6 +108,21 @@ input[type="radio"]:checked {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size:1.0em;
+}
+.extra-plan-card{
+    background-color:rgb(3, 3, 31);
+    color:rgb(255, 255, 255) ;
+
+}
+.extra-plan-card h3{
+  border-color: rgb(255, 255, 255);
+}
+.extra-plan-card h4{
+    color:rgb(255,255,255);
+
+}
+.extra-plan-card button{
+    background-color: rgb(241, 109, 42);
 }
 .free-plan-btn{
     background-color:rgba(128, 128, 128, 0.829) ;

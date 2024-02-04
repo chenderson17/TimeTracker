@@ -1,23 +1,35 @@
 import React from "react"
+import { useState } from "react";
 import Header from './Header.js';
 import './Pricing.css'
 import Footer from './Footer.js';
 export default function Pricing(){
+   const [price,setPrice] = useState(0.00);
+   const[isMonthly, setIsMonthly] = useState(true);
+   const [selectedOption, setSelectedOption] = useState('monthly-pricing');
+   function handleChange(){
+    setIsMonthly(!isMonthly);
+   }
+   function handlePrice(){
+    if(isMonthly) {return ['$0.00/month', '$10.00/month', '$25.00/month','$50.00/month'];}
+    else{return ['$0.00/year', '$120.00/year', '$300.00/year','$600.00/year'];}
+   }
  return(
   <>
    <Header signUpBtnDisplay={true} signInBtnDisplay={true} />
    <div className='price-top'>
-    <h2 className='pricing-header'> <span className='price-header-span'>Flexible Pricing </span> to Fit Your Business Needs</h2>
+    <h2 className='pricing-header'> <span className='price-header-span'>Flexible Pricing </span>to Fit Your Business Needs</h2>
     <form>
     <fieldset className='pricing-radio'>
         <div className='pricing-radio-monthly-container price-radio-container'>
-            <input type='radio' name='price-radio' value='monthly-pricing' checked />
+            <input type='radio' name='price-radio' value='monthly-pricing' onChange={handleChange} checked={isMonthly} />
             <label for='monthly'>Monthly</label>
            
         </div>
+        <p>or</p>
 
         <div className='pricing-radio-yearly-container price-radio-container'>
-            <input type='radio' name='price-radio' value='yearly-pricing' />
+            <input type='radio' name='price-radio' value='yearly-pricing' onChange={handleChange} />
             <label for='yearly'>Yearly</label>
             
         </div>
@@ -30,7 +42,7 @@ export default function Pricing(){
             <h3>Free</h3>
           
           
-            <h4 className='price price-free'>$0.00/month</h4>
+            <h4 className='price price-free'>{handlePrice()[0]}</h4>
            
           
             <ul className="price-plan price-list-free">
@@ -45,7 +57,7 @@ export default function Pricing(){
 
         <div className='basic-plan-card price-card'>
             <h3>Basic</h3>
-            <h4 className='price price-basic'>$10.00/month</h4>
+            <h4 className='price price-basic'>{handlePrice()[1]}</h4>
             <ul className="price-plan price-list-basic">
                 <li>Enhanced Time Tracking</li>
                 <li>Multi-User Access</li>
@@ -62,7 +74,7 @@ export default function Pricing(){
             <h3>Extra</h3>
        
             
-            <h4 className='price price-extra'>$25.00/month</h4>
+            <h4 className='price price-extra'>{handlePrice()[2]}</h4>
           
            
             <ul className="price-plan price-list-extra">
@@ -79,7 +91,7 @@ export default function Pricing(){
 
         <div className='premium-plan-card price-card'>
             <h3>Premium</h3>
-            <h4 className='price price-premium'>$50.00/month</h4>
+            <h4 className='price price-premium'>{handlePrice()[3]}</h4>
             <ul className="price-plan price-list-premium">
                 <li>Unlimited Users</li>
                 <li>Advanced Analytics Dashboard</li>
