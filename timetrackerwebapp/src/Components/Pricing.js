@@ -16,7 +16,7 @@ export default function Pricing(){
    }
  return(
   <>
-   <Header signUpBtnDisplay={true} signInBtnDisplay={true} isHome={false} isPrice={true} />
+    <a id='pricing'></a>
    <div className='price-top'>
     <h2 className='pricing-header'> <span className='price-header-span'>Flexible Pricing </span>to Fit Your Business Needs</h2>
     <form>
@@ -101,7 +101,6 @@ export default function Pricing(){
             <button className='price-get-started-btn premium-plan-btn'>Get Started</button>
         </div>
     </div>
-    <Footer />
   </>
  )
 }
