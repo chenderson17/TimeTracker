@@ -7,7 +7,7 @@ import Contact from './Contact.js';
 export default function Home(){
  return(
    <>
-    <Header signUpBtnDisplay={true} signInBtnDisplay={true} />
+    <Header signUpBtnDisplay={true} signInBtnDisplay={true} isHome={true} />
     <Landing />
     <Cards />
     <About />

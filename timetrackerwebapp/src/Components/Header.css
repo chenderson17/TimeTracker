@@ -26,9 +26,13 @@ header a {
  font-weight: 400;
 }
 .navbar a:hover{
- color:rgba(255, 85, 0, 0.671);
+ color:rgb(247, 104, 32);
 }
 
+.currentLink{
+  color:rgba(255, 85, 0, 0.871);
+  font-weight: 500;
+}
 
 
 

@@ -5,6 +5,8 @@
 }
 .price-top fieldset{
     width: 25%;
+    border:2px solid rgb(3,3,31);
+    border-radius: 5px;
     margin: 0 auto;
 }
 .price-top p{
