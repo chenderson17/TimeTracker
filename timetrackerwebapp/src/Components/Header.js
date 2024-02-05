@@ -4,13 +4,17 @@ import {useState} from 'react'
 export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPrice}){
   function signIn() {
     if (signInBtnDisplay) {
-      return <button className="signUpBtn-header header-btns">Sign In</button>;
+      return (
+        <a href='/signin'>
+      <button className="signInBtn-header header-btns">Sign In</button>
+      </a>
+      );
     }
   }
 
   function signUp() {
     if (signUpBtnDisplay) {
-      return <button className="signInBtn-header header-btns ">Sign Up</button>;
+      return <button className="signUpBtn-header header-btns ">Sign Up</button>;
     }
   }
 
