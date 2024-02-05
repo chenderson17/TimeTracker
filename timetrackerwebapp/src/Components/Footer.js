@@ -39,7 +39,7 @@ export default function Footer(){
           <a href="#about" className="navlink">About</a>
          </li>
          <li>
-          <a href='/#pricing' className="navlink">Pricing</a>
+          <a href='/pricing' className="navlink">Pricing</a>
          </li>
          <li>
           <a href="#contact" className="navlink">Contact</a>

@@ -16,7 +16,7 @@ export default function Pricing(){
    }
  return(
   <>
-    <a id='pricing'></a>
+    <Header signUpBtnDisplay={true} signInBtnDisplay={true} isHome={false} isPrice={true} />
    <div className='price-top'>
     <h2 className='pricing-header'> <span className='price-header-span'>Flexible Pricing </span>to Fit Your Business Needs</h2>
     <form>
@@ -101,6 +101,13 @@ export default function Pricing(){
             <button className='price-get-started-btn premium-plan-btn'>Get Started</button>
         </div>
     </div>
+    <div className="pricing-more-questions">
+        <div className="pricing-ask-more-container">
+        <h2>Have More Questions? Speak With a Member of Our Sales Team</h2>
+        <button className='pricing-connect-btn'><span>Connect</span><box-icon name='phone-call' type='solid' rotate='270' color='white' ></box-icon></button>
+        </div>
+    </div>
+    <Footer />
   </>
  )
 }

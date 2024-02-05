@@ -64,12 +64,11 @@ input[type="radio"]:checked {
     justify-content: space-around;
     gap:2.5rem;
     padding: 4rem;
-    border-bottom: solid rgba(0, 0, 0, 0.093) 1px;
 }
 .price-card{
     border: 1px solid rgba(0, 0, 0, 0.377);
-    width: 25%;
-    padding: 5rem 2rem;
+    width: 20%;
+    padding: 4rem 2rem;
     display: grid;
     align-items: center;
     border-radius: 4px;
@@ -77,7 +76,7 @@ input[type="radio"]:checked {
 }
 
 .price-card h3{
-    font-size: 1.9em;
+    font-size: 1.5em;
     margin-bottom: 1rem;
     text-align: center;
     width: 100%;
@@ -110,6 +109,7 @@ input[type="radio"]:checked {
     font-weight: 500;
     font-size:1.0em;
 }
+
 .extra-plan-card{
     background-color:rgb(3, 3, 31);
     color:rgb(255, 255, 255) ;
@@ -127,4 +127,30 @@ input[type="radio"]:checked {
 }
 .free-plan-btn{
     background-color:rgba(128, 128, 128, 0.829) ;
+}
+.pricing-more-questions{
+    padding: 2rem;
+    margin:1rem 6rem;
+    margin-bottom:6rem;
+    background-color:rgb(237, 237, 237) ;
+    display: flex;
+    justify-content: center;
+}
+.pricing-more-questions h2{
+    
+}
+.pricing-connect-btn{
+    background-color:rgb(3,3,31);
+    border:none;
+    border-radius: 5px;
+    padding:1rem 4rem;
+    color:rgba(255, 255, 255);
+    font-size:1.0em;
+    font-weight: 600;
+    margin-top:1rem;
+    display: flex;
+    align-content: center;
+    gap:0.5em;
+}
+.pricing-connect-btn box-icon{
 }
