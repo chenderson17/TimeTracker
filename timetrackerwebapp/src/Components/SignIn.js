@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header.js";
 import Footer from './Footer.js';
 import './SignIn.css';
-import OfficeImage from '../images/5541.jpg';
+import OfficeImage from '../images/SignInImage-1920.jpg';
 export default function SignIn(){
     return(
         <>
