@@ -101,9 +101,10 @@ export default function Pricing(){
             <button className='price-get-started-btn premium-plan-btn'>Get Started</button>
         </div>
     </div>
+
     <div className="pricing-more-questions">
         <div className="pricing-ask-more-container">
-        <h2>Have More Questions? Speak With a Member of Our Sales Team</h2>
+        <h2>Have Any Questions? Speak With a Member of Our Sales Team</h2>
         <button className='pricing-connect-btn'><span>Connect</span><box-icon name='phone-call' type='solid' rotate='270' color='white' ></box-icon></button>
         </div>
     </div>

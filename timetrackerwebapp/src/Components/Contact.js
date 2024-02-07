@@ -1,4 +1,5 @@
 import './contact.css';
+import MessageImage from '../images/10261624.jpg';
 import React from 'react';
 import { useState } from 'react';
 export default function Contact(){
@@ -12,10 +13,15 @@ export default function Contact(){
  return(
   <section className='contact-section'>
    <a id ="contact"></a>
+  
+   <div className='contact-image-form-container'>
+   <div className='contact-image-container'>
+    <img className='contact-image' src={MessageImage} alt='cartoon image of a person messaging'/>
+   </div>
+   <form action='/' method='POST'>
    <div className='contact-header-container'>
    <h2 className="contact-header">Contact Us</h2>
    </div>
-   <form action='/' method='POST'>
     <div className='name-container'>
     <div className="fname-container">
      <div className="contact-input-content">
@@ -52,6 +58,7 @@ export default function Contact(){
      <button className="send-btn" onMouseOver={handleHover}onMouseLeave={handleLeave}><span className="send-btn-text">Send</span><box-icon name='send' color="white" size="sm" animation={animate}  ></box-icon></button>
     </div>
    </form>
+   </div>
   </section>
  )
 }

@@ -12,7 +12,11 @@ export default function Footer(){
 
     <p className="footer-contact-subheader">Phone</p>
     <a href="tel:+">(555)-555-5555</a>
+    <p className="footer-contact-subheader">Email</p>
+    <a href='/'>info@timetracker.com</a>
     </div>
+
+    
   </div>
   <div className="footer-socials">
     <div>
