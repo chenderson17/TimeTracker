@@ -15,7 +15,11 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
 
   function signUp() {
     if (signUpBtnDisplay) {
-      return <button className="signUpBtn-header header-btns ">Sign Up</button>;
+      return(
+      <a href='/signup'>
+     <button className="signUpBtn-header header-btns ">Sign Up</button>
+      </a>
+      )
     }
   }
 

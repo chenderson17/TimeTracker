@@ -8,7 +8,6 @@ export default function SignIn(){
         <>
         <Header signUpBtnDisplay={true} signInBtnDisplay={false} isHome={false} isPrice={false} />
         <section className='sign-in-section'>
-        
         <div class='sign-in-main-c'>
          <h2>Sign In</h2>
          <form action='/' method='POST'>
@@ -23,7 +22,7 @@ export default function SignIn(){
             </div>
             <div className='submit-btn-container'>
             <button type='submit'>Submit</button>
-            <p>Don't have an account? <a href='/'>Sign Up</a></p>
+            <p>Don't have an account? <a href='/signup'>Sign Up</a></p>
             </div>
          </form>
          </div>
