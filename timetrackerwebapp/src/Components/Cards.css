@@ -10,6 +10,7 @@
  font-size: 2rem;
  letter-spacing: 1px;
  text-transform:capitalize;
+ color:rgb(14,17,17);
 }
 .cards-container{
  display: flex;
@@ -20,12 +21,13 @@
  color:rgb(50,50,50);
 }
 .card{
- width: 22rem;
- padding: 3rem 2.2rem;
+ width: 25%;
+padding:4rem 2rem;
  border-radius: 2px;
  box-shadow: 1px 1px 1px 1px rgb(190, 188, 188);
  border:1px solid rgba(0, 0, 0, 0.075);
  text-align: center;
+ font-weight: 500;
 }
 .cards-header{
  text-align: center;
@@ -46,5 +48,5 @@
     justify-content: center;
 }
 .cards-bottom-image-container img{
-    width:50%;
+    width:35%;
 }
