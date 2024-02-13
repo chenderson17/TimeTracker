@@ -17,7 +17,8 @@ export default function SignIn(){
             </div>
             <div className='sign-in-password-container sign-in-form-container'>
             <label form="sign-in-password">Password</label>
-            <input name='sign-in-password' type='password' placeholder="Password" required={true}></input>
+           
+            <input name ='sign-in-password' type='password' placeholder="Password" required={true} />
             <a href='/'>Forgot Password?</a>
             </div>
             <div className='submit-btn-container'>

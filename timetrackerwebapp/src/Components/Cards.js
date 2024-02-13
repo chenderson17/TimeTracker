@@ -1,5 +1,6 @@
 import './Cards.css';
 import 'boxicons';
+import Image from '../images/card-img-2.jpeg';
 export default function Cards(){
  return(
   <>
@@ -23,6 +24,9 @@ export default function Cards(){
  </div>
  </div>
  </section>
+ <div className="cards-bottom-image-container">
+  <img src={Image} alt='Cartoon of people in yellow clothes pulling strings to clocks'/>
+ </div>
  </>
  )
 }

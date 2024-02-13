@@ -1,0 +1,130 @@
+.signup-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:2rem;
+    margin-top:1rem;
+    
+}
+.company-org-container{
+    border:1px solid rgb(0,0,0);
+    padding: 12rem 4rem;
+}
+.signup-header{
+    display: flex;
+    justify-content: center;
+
+}
+.signup-header h2{
+    font-size:2.5em;
+}
+
+.signup-container{
+    display: block;
+}
+.signup-select-label{
+    font-size:1.2em;
+    font-weight: 500;
+}
+.signup-select-container{
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+.signup-select-container select{
+    background-color: rgb(255,255,255);
+    font-size:1.1em;
+    border:2px solid rgb(0,0,0);
+    cursor:pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding:0.65rem;
+    border-radius: 20px;
+}
+.signup-select-container select option{
+   padding: 1rem;
+   
+}
+.signup-container label{
+    display: block;
+    margin-bottom:0.5em;
+    font-weight: 600;
+}
+.signup-form input{
+    width: 20rem;
+    border-radius: 5px;
+    border:1px solid rgb(0,0,0);
+    padding: 1rem;
+}
+
+.signup-form-org{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns:repeat(2,1fr);
+}
+
+.signup-form-employee{
+   padding:1rem;
+   border:1px solid rgb(0,0,0);
+   display:grid;
+   grid-template-rows:repeat(4,1fr);
+   grid-template-columns: repeat(2,1fr);
+}
+.signup-fname-container{
+    grid-row-start:2;
+}
+.signup-lname-container{
+    grid-row-start:2;
+    grid-column-start:2;
+}
+.signup-email-container{
+    grid-row-start:3;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.signup-phone-container{
+    grid-row-start:3;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+.signup-password-container{
+    grid-row-start:4;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.signup-password-container input{
+    width: 100%;
+}
+
+.signup-form-employee > *{
+    padding:1rem;
+}
+.signup-companyId{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+    
+}
+.signup-companyId input{
+    width: 100%;
+}
+
+.signup-fname-container{
+
+}
+.signup-lname-container{
+  
+}
+.create-an-account-button-container{
+    grid-row-start:5;
+    grid-column-start:1;
+    grid-column-end:3;
+  
+}
+.create-an-account-button-container button{
+    width:100%;
+    font-weight: 600;
+    padding:1rem;
+    margin:0 auto;
+
+}

@@ -7,7 +7,7 @@ export default function About(){
   <h2 className="about-us-header">About Us</h2>
    <section className = 'our-start'>
     <h3>Our Start</h3>
-    <p>We are thrilled to embark on a new journey as TimeTracker, a dynamic and innovative venture founded on the principles of excellence and creativity. Our mission is to With a dedicated team of experts and a passion for technology. As we embark on this exciting chapter, we are committed to fostering growth, cultivating meaningful relationships, and making a positive impact in our community. Join us on this exciting adventure as we shape the future of the employee managemnt sector.</p>
+    <p>We are thrilled to embark on a new journey as TimeTracker, a dynamic and innovative venture founded on the principles of excellence and creativity.  VWith a dedicated team of experts and a passion for technology. As we embark on this exciting chapter, we are committed to fostering growth, cultivating meaningful relationships, and making a positive impact in our community. Join us on this exciting adventure as we shape the future of the employee managemnt sector.</p>
     <h3>Our Mission</h3>
     <p>At TimeTracker, our mission is to revolutionize workforce management through innovative and user-friendly employee scheduling software. We are committed to providing businesses with a seamless solution that optimizes scheduling processes, enhances employee satisfaction, and fosters operational efficiency. By empowering organizations to effortlessly manage their workforce, we strive to contribute to their success and growth in the ever-evolving landscape of modern business.</p>
    </section>

@@ -1,6 +1,11 @@
 
 .contact-section{
     padding: 4rem;
+    
+    
+    margin:2rem 2rem;
+    margin-bottom:4rem;
+    border-radius: 5px;
 }
 .contact-image-form-container{
     display: flex;
