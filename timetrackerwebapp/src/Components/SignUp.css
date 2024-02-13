@@ -74,7 +74,7 @@
    
 
 
-    
+
 }
 
 .signup-form-employee{
@@ -110,7 +110,7 @@
     width: 100%;
 }
 
-.signup-form-employee > *{
+.signup-form-employee > *, .org-page-one > *{
     padding:1rem;
 }
 .signup-companyId{
@@ -119,7 +119,7 @@
     grid-column-end:3;
     
 }
-.signup-companyId input{
+.signup-companyId input, .company-name-container input{
     width: 100%;
 }
 
@@ -141,4 +141,100 @@
     padding:1rem;
     margin:0 auto;
 
+}
+.org-page-one{
+    
+    display:grid;
+    grid-template-rows:repeat(1fr,5);
+    grid-template-columns: repeat(1fr,2);
+    padding:1rem;
+    border:1px solid rgb(0,0,0);
+}
+.org-btn-container-right{
+    grid-row-start:5;
+    grid-column-start:2;
+}
+.company-name-container{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.org-page-two{
+    display: grid;
+    background-color: lightblue;
+    grid-template-rows:repeat(4,auto);
+    grid-template-columns: repeat(2,1fr);
+}
+
+.org-page-two  > * {
+    border:1px solid rgb(0,0,0);
+    padding:1rem;
+}
+.org-page-two label{
+    font-weight: 500;
+}
+.org-page-two h3{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+    background-color: pink;
+    text-align: center;
+    font-size:1.2em;
+}
+.price-btn-container{
+    display: flex;
+    background-color: rgb(255,255,255);
+    gap:1rem;
+    padding:1rem;
+}
+.price-btn-container button{
+    width: 10rem;
+    padding:0.5rem;
+    border:none;
+    border-radius: 2px;
+    font-weight: 500;
+    background-color: rgba(255, 85, 0, 0.849);
+    color:rgb(255,255,255);
+    font-family: 'Poppins', sans-serif;
+    font-size:0.9em;
+}
+.price-btn-container details{
+    font-weight: 500;
+}
+.num-of-employees-container{
+    grid-row-start:2;
+    grid-column-start:1;
+    grid-column-end:3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    align-items: center;
+    gap:1rem;
+    font-family: 'Poppins', sans-serif;
+}
+.num-of-employees-container input{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.enter-card-details-container{
+    background-color:orange;
+    grid-row-start:3;
+    grid-column-start:1;
+    grid-column-end:3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-details-style-container input{
+    display: block;
+
+}
+.card-details-container label{
+
+}
+.free-btn-container button{
+    background-color:rgba(128, 128, 128, 0.829);
+    color:rgb(255,255,255);
 }

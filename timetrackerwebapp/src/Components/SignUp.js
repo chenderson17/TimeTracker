@@ -37,7 +37,7 @@ export default function SignUp(){
     const freeBtn = ()=>{
         return(
             <div className='free-btn-container'>
-            <button>
+            <button className='signup-free-btn'>
                 Free
             </button>
             <details>
@@ -126,7 +126,7 @@ export default function SignUp(){
     let orgLeftButton = () =>{
         return(
             <button className='org-left-button' onClick={leftBtnClicked}>
-                <box-icon name='left-arrow-circle' ></box-icon>
+                <box-icon name='left-arrow-circle' size='lg'></box-icon>
             </button>
         )
     }
@@ -143,7 +143,7 @@ export default function SignUp(){
     const displayPricePlans = (num) =>{
         if(num <= 10) {
             return (
-                <div>
+                <div className='price-btn-container'>
                 {freeBtn()}
                 {basicBtn()}
                 {extraBtn()}
@@ -153,7 +153,7 @@ export default function SignUp(){
         }
         else if(num > 10 && num <= 100){
             return(
-                <div>
+                <div className='price-btn-container'>
                {basicBtn()}
                 {extraBtn()}
                 {premiumBtn()}
@@ -162,7 +162,7 @@ export default function SignUp(){
         }
         else if(num > 100 && num <= 500){
             return(
-            <div>
+            <div className='price-btn-container'>
            {extraBtn()}
             {premiumBtn()}
             </div>
@@ -170,7 +170,7 @@ export default function SignUp(){
         }
         else if(num > 500){
             return(
-            <div>
+            <div className='price-btn-container'>
             {premiumBtn()}
             </div>
             )
@@ -215,7 +215,7 @@ export default function SignUp(){
     function displayOrgPage(pageNumber){
         if(pageNumber === 1){
             return(
-                <>
+                <div className='org-page-one'>
                 <div className='company-name-container signup-container'>
                 <label for='companyNameSignup'>Company Name</label>
                 <input type='text' name='companyNameSignup' placeholder='Company Name'  required={true}></input>
@@ -226,28 +226,30 @@ export default function SignUp(){
 
 
 
-                <>
+                <div className='org-btn-container-right'>
                  {orgRightButton()}
-                </>
-                </>
+                </div>
+                </div>
             )
            
         }
         else if(pageNumber === 2){
             return(
-                <>
+                <div className='org-page-two'>
                 <h3>Choose a Price Plan</h3>
                  <div className="num-of-employees-container signup-container">
-                <label for='numOfEmployeesSignup'>Number of Employees</label>
+                <h3>Number of Employees</h3>
                 <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
+                {displayPricePlans(numOfEmployees)}
                 </div>
               
-                {displayPricePlans(numOfEmployees)}
+                
 
 
                 <div className='enter-card-details-container'>
                     <h3>Enter Card Details</h3>
                     <form action ='/' onSumbit={handleSubmit}>
+                        <div className='card-details-style-container'>
                         <label for='card-number'>Card Number</label>
                         <input type="text"></input>
 
@@ -256,7 +258,7 @@ export default function SignUp(){
                         <label for='cvv'>CVV</label>
                         <input type='text'></input>
 
-                        <label for='billing-address'>Billing Address</label>
+                        <label for='billing-address'>Billing</label>
                         <input type='text' placeholder='Address Line 1'></input>
                         <input type='text' placeholder='Address Line 2 (Optional)'></input>
                         <input type='text' placeholder='Zip Code'></input>
@@ -275,14 +277,18 @@ export default function SignUp(){
                         <datalist id='country-list'>
                             <option value="">--Country--</option>
                         </datalist>
-                        
+                        </div>
                     
                     </form>
                 </div>
+                    <div className='org-left-btn'>
                     {orgLeftButton()}
+                    </div>
+                    <div className='org-right-btn'>
                     {orgRightButton()}
+                    </div>
                 
-                </>
+                </div>
             )
 
         }
