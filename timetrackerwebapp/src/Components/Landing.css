@@ -7,16 +7,13 @@
  overflow: hidden;
  margin:0 auto;
  width:55rem;
- z-index: -1;
 }
+
 .hero-img{
  width: 100%;
- position: relative;
- bottom: 2.5rem;
 }
 .hero-header{
  margin-top:2.0rem;
- z-index:1;
  font-family:'Poppins', sans-serif;
  font-weight: 500;
  font-size: 3.0em;

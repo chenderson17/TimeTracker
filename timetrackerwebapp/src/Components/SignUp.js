@@ -7,7 +7,7 @@ export default function SignUp(){
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const [orgPageNumber, setPageNumber] = useState(1);
     const [fname, setFname] = useState("");
-    const[lname, setLName] = useState("");
+    const[lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const[phone, setPhone] = useState("");
     const[priceDetails, setPriceDetails] = useState("");
@@ -16,7 +16,7 @@ export default function SignUp(){
         setFname(event.target.value);
     }
     function changeLname (event){
-        setFname(event.target.value);
+        setLname(event.target.value);
     }
     function changeEmail (event){
         setEmail(event.target.value);
@@ -26,6 +26,13 @@ export default function SignUp(){
     }
     function changePrice (event){
         setPriceDetails(event.target.value);
+    }
+    const createAccountBtn = () =>{
+        return(
+        <button>
+            Create Account
+        </button>
+        )
     }
     const freeBtn = ()=>{
         return(
@@ -217,12 +224,6 @@ export default function SignUp(){
 
                 {genericInput()}
 
-                <div className="num-of-employees-container signup-container">
-                <label for='numOfEmployeesSignup'>Number of Employees</label>
-                <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}  required={true}></input>
-                </div>
-
-                
 
 
                 <>
@@ -252,7 +253,8 @@ export default function SignUp(){
 
                         <label for='expiration-date'>Expiration Date</label>
                         <input type="date"></input>
-
+                        <label for='cvv'>CVV</label>
+                        <input type='text'></input>
 
                         <label for='billing-address'>Billing Address</label>
                         <input type='text' placeholder='Address Line 1'></input>
@@ -273,6 +275,7 @@ export default function SignUp(){
                         <datalist id='country-list'>
                             <option value="">--Country--</option>
                         </datalist>
+                        
                     
                     </form>
                 </div>
@@ -287,6 +290,16 @@ export default function SignUp(){
             return(
                 <>
                 <h3>Review</h3>
+                    <h4>First Name</h4>
+                    <p>{fname}</p>
+                    <h4>Last Name</h4>
+                    <p>{lname}</p>
+                    <h4>Email</h4>
+                    <p>{email}</p>
+                    <h4>Phone</h4>
+                    <p>{phone}</p>
+                    <h4>Price Plan</h4>
+                    <p>{phone}</p>
                     {orgLeftButton()}
                 
                 </>
@@ -319,7 +332,7 @@ export default function SignUp(){
                 {genericInput()}
 
                 <div className='create-an-account-button-container'>
-                {createAButton("Create Account")}
+                {createAccountBtn()}
                 </div>
 
             </form>
