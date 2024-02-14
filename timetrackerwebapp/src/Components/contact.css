@@ -28,7 +28,7 @@
 }
 .contact-header{
  text-align: center;
- font-size: 2em;
+ font-size: 1.8 em;
  
 }
 .contact-section input, .contact-section textarea {
@@ -43,7 +43,7 @@
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.100);
     border:1px solid rgba(3, 3, 31, 0.219);
-    padding:0rem 2rem;
+    padding:1.5rem 2rem;
     border-radius: 5px;
     gap:2rem;
 
@@ -57,7 +57,6 @@
 
 }
 .contact-section label{
- font-size: 1.1em;
  font-weight: 500;
 }
 .name-container{
@@ -92,10 +91,10 @@
 }
 .contact-message-container textarea{
  padding: 1rem;
- font-size: 1rem;
  resize: none;
  margin-top: 0.5rem;
- font-family:sans-serif;
+ font-family:'Poppins', sans-serif;
+ font-weight: 400;
 }
 .contact-message-container textarea:focus{
  outline:none;
@@ -115,7 +114,7 @@
  color:rgb(255,255,255);
  border: none;
  border-radius: 2px;
- font-size: 1.30em;
+ font-size: 1.2em;
  transition: 250ms ease;
 }
 .send-btn-text{

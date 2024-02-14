@@ -20,7 +20,7 @@
     box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.466);
 }
 .sign-in-main-c h2{
-    font-size:2.5rem;
+    font-size:2em;
     margin-bottom: 1.5rem;
 }
 .sign-in-section label{
@@ -46,6 +46,7 @@
 .sign-in-password-container a{
     text-align: right;
     font-weight: 500;
+    font-size:0.9em;
     
 }
 .submit-btn-container{

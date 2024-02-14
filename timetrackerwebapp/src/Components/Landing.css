@@ -6,7 +6,7 @@
 .hero-img-container{
  overflow: hidden;
  margin:0 auto;
- width:55rem;
+ width:52rem;
 }
 
 .hero-img{
@@ -18,9 +18,10 @@
  font-weight: 500;
  font-size: 2.5em;
  width: 50%;
+ white-space: nowrap;
 }
 .bold{
-    font-weight: 600;
+  font-weight: 600;
  color:rgba(255, 85, 0, 0.671);
 }
 

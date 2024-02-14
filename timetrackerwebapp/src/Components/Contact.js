@@ -52,7 +52,7 @@ export default function Contact(){
 
     <div className="contact-message-container">
     <label name="contact-message">Message</label>
-    <textarea name="contact-message" cols="30" rows="8" maxLength={250} placeholder='Leave your message here...'></textarea>
+    <textarea name="contact-message" cols="30" rows="7" maxLength={250} placeholder='Leave your message here...'></textarea>
     </div>
     <div className="send-btn-container">
      <button className="send-btn" onMouseOver={handleHover}onMouseLeave={handleLeave}><span className="send-btn-text">Send</span><box-icon name='send' color="white" size="sm" animation={animate}  ></box-icon></button>
