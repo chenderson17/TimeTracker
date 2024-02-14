@@ -22,3 +22,9 @@ a{
   cursor: pointer;
   font-family:'Poppins', sans-serif
 }
+
+
+
+.display-none{
+  display:none;
+}

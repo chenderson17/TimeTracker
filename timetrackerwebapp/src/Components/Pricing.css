@@ -4,10 +4,10 @@
 
 }
 .price-top fieldset{
-    width: 25%;
+    width: 20%;
     border-radius: 5px;
     margin: 0 auto;
-
+    border:rgb(3,3,31) solid 1px;
 }
 .price-top p{
     color:rgb(3,3,31);
@@ -57,7 +57,7 @@ input[type="radio"]:checked {
     gap:0.5rem;
 }
 .pricing-radio label{
-    font-size:1.8em;
+    font-size: 1.4em;
 }
 .pricing-cards{
     display: flex;

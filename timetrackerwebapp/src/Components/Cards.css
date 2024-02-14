@@ -18,11 +18,10 @@
  justify-content: center;
  gap:2.5rem;
  padding: 2rem;
- 
  color:rgb(50,50,50);
 }
 .card{
- width: 25%;
+ width: 25rem;
  padding:4rem 2rem;
  border-radius: 2px;
  box-shadow: 1px 1px 1px 1px rgb(190, 188, 188);

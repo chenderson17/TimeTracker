@@ -16,7 +16,7 @@
 
 }
 .signup-header h2{
-    font-size:2.5em;
+    font-size:1.9em;
 }
 .signup-type-container{
     width: 50%;
@@ -34,7 +34,8 @@
     display: block;
 }
 .signup-select-label{
-    font-size:1.2em;
+    font-size:1.1em;
+    text-align: center;
     font-weight: 500;
 }
 .signup-select-container{
@@ -46,22 +47,28 @@
 }
 .signup-select-container select{
     background-color: rgb(255,255,255);
-    font-size:1.1em;
+    font-size:1em;
+    width:40rem;
     border:2px solid rgb(0,0,0);
     cursor:pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     padding:0.65rem;
     border-radius: 20px;
+    margin: 0 auto;
 }
 .signup-select-container select option{
    padding: 1rem;
-   
 }
 .signup-container label{
     display: block;
     margin-bottom:0.5em;
     font-weight: 600;
+}
+.signup-form{
+    border:1.2px solid rgb(121,121,121);
+    border-radius:5px;
+    
 }
 .signup-form input{
     width: 20rem;
@@ -79,10 +86,10 @@
 
 .signup-form-employee{
    padding:1rem;
-   border:1px solid rgb(0,0,0);
    display:grid;
    grid-template-rows:repeat(4,1fr);
    grid-template-columns: repeat(2,1fr);
+   border-radius: 5px;
 }
 .signup-fname-container{
     grid-row-start:2;
@@ -148,7 +155,7 @@
     grid-template-rows:repeat(1fr,5);
     grid-template-columns: repeat(1fr,2);
     padding:1rem;
-    border:1px solid rgb(0,0,0);
+    
 }
 .org-btn-container-right{
     grid-row-start:5;
@@ -159,16 +166,28 @@
     grid-column-start:1;
     grid-column-end:3;
 }
+.org-left-right-btn-container{
+    grid-row-start:4;
+}
 .org-page-two{
     display: grid;
-    background-color: lightblue;
-    grid-template-rows:repeat(4,auto);
-    grid-template-columns: repeat(2,1fr);
+    flex-direction: column;
+   
+}
+.org-left-btn{
+    grid-row-start:4;
+    grid-column-start:1;
+    margin:0 auto;
+}
+.org-right-btn{
+    grid-row-start:4;
+    grid-column-start:2;
+    margin:0 auto;
 }
 
 .org-page-two  > * {
-    border:1px solid rgb(0,0,0);
     padding:1rem;
+   
 }
 .org-page-two label{
     font-weight: 500;
@@ -177,9 +196,8 @@
     grid-row-start:1;
     grid-column-start:1;
     grid-column-end:3;
-    background-color: pink;
     text-align: center;
-    font-size:1.2em;
+    font-size:1.4em;
 }
 .price-btn-container{
     display: flex;
@@ -191,9 +209,9 @@
     width: 10rem;
     padding:0.5rem;
     border:none;
+    background-color: rgb(121,121,121);
     border-radius: 2px;
     font-weight: 500;
-    background-color: rgba(255, 85, 0, 0.849);
     color:rgb(255,255,255);
     font-family: 'Poppins', sans-serif;
     font-size:0.9em;
@@ -205,35 +223,126 @@
     grid-row-start:2;
     grid-column-start:1;
     grid-column-end:3;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: aliceblue;
     align-items: center;
-    gap:1rem;
     font-family: 'Poppins', sans-serif;
+    border-bottom: solid 1px rgb(121,121,121);
+}
+.num-of-employees-container div{
+   
+}
+.num-of-employees-container div h4{
+    margin-bottom:0.5rem;
+}
+.num-of-employees-input-container{
+    padding:1.5rem;
+}
+.num-of-employees-input-container div{
 }
 .num-of-employees-container input{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 .enter-card-details-container{
-    background-color:orange;
     grid-row-start:3;
     grid-column-start:1;
     grid-column-end:3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.card-details-style-container input{
+
+.card-details-style-container{
+    display:grid;
+  
+    grid-template-rows:repeat(4,auto);
+    grid-template-columns: repeat(2,auto);
+    padding:1rem;
+    border-radius: 5px;
+}
+
+.card-details-style-container div input{
     display: block;
-
 }
-.card-details-container label{
-
+.card-details-style-container div{
+    padding:1rem;
 }
+.card-detail-expr {
+    grid-row-start:2;
+    grid-column-start:2;
+}
+
+.card-details-style-container div label, .billing-address-container div label{
+    font-weight: 600;
+}
+.cvv-style-container{
+    grid-row-start:3;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.cvv-style-container input{
+    
+}
+.billing-address-container{
+    grid-row-start:3;
+    grid-column-start:1;
+    grid-column-end:3;
+    
+    padding:1rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    
+}
+.page-change-btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap:1.2rem;
+    margin-top:1rem;
+}
+
+.billing-address-container-header{
+    text-align: center;
+    font-size:1.3em;
+}
+.billing-address-container-header h4{
+}
+.billing-style-container{
+    display: grid;
+    grid-template-rows:auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap:1rem;
+}
+.billing-style-container div input{
+    display: block;
+}
+.billing-address-container-addressOne-addressTwo{
+    grid-row-start:1;
+    grid-row-end:4;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.billing-address-container-addressOne-addressTwo div{
+    margin:1rem 0;
+}
+.billing-address-container-addressOne-addressTwo input{
+    width:100%;
+    
+}
+
+.org-right-button , .org-left-button {
+    background-color: transparent;
+    border:none;
+    outline:none;
+}
+.org-btn-container-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+
+
 .free-btn-container button{
     background-color:rgba(128, 128, 128, 0.829);
     color:rgb(255,255,255);

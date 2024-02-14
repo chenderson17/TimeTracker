@@ -11,6 +11,71 @@ export default function SignUp(){
     const [email, setEmail] = useState("");
     const[phone, setPhone] = useState("");
     const[priceDetails, setPriceDetails] = useState("");
+    const billing = ()=>{
+        return(
+        <div className='billing-address-container'>
+                        <div className="billing-address-container-header">
+                        <h4>Billing</h4>
+                        </div>
+                        <div className='billing-style-container'>
+                            <div className='billing-address-container-addressOne-addressTwo'>
+                            <div>
+                            <label>Address Line 1 </label>
+                        <input type='text' placeholder='Address Line 1' required={true}></input>
+                        </div>
+                        <div>
+                        <label>Address Line 2</label>
+                        <input type='text' placeholder='Address Line 2 (Optional)'></input>
+                        </div>
+                        </div>
+                        
+                        <div>
+                        <label>Zip Code</label>
+                        <input type='text' placeholder='Zip Code' required={true}></input>
+                        </div>
+                        <div>
+                        <label>City</label>
+                        <input type='text' placeholder='City' required={true}></input>
+                        </div>
+                        <div>
+                        <label>State</label>
+                        <input list='state-providence-region-list' name='select-country-list' placeholder='State/Providence/Region' />
+                        </div>
+
+
+                        <div>
+                            <label>Country</label>
+                        <input list='country-list' name='select-country-list' placeholder='Country' required={true}/>
+                        <datalist id='country-list'>
+                            <option value="">--Country--</option>
+                        </datalist>
+                        </div>
+                        </div>
+                        <div className='org-left-btn-container'>
+                    {orgLeftButton()}
+                    </div>
+                        </div>
+        )
+    }
+    const signupType = ()=>{
+        return(
+            <div className='signup-type-container'>
+            <div className='company-org-container'>
+            <div className='signup-header'>
+            <h2>Sign Up</h2>
+            </div>
+            <div className='signup-select-container'>
+                <label for='employee-or-org-select' className='signup-select-label'>Are you an Employee or Registering on behalf of an Organizaiton?</label>
+                <select name='employee-org-select' id='employee-or-org-select' onClick={type}>
+                    <option value='org'>Organization</option>
+                    <option value='employee'>Employee</option>
+                </select>
+            </div>
+            </div>
+            </div>
+    
+        )
+    }
 
     function changeFname (event){
         setFname(event.target.value);
@@ -29,7 +94,7 @@ export default function SignUp(){
     }
     const createAccountBtn = () =>{
         return(
-        <button>
+        <button type='submit'>
             Create Account
         </button>
         )
@@ -118,7 +183,7 @@ export default function SignUp(){
     let orgRightButton = ()=>{
         return(
             <button className='org-right-button' onClick={rightBtnClicked}>
-                      <box-icon name='right-arrow-circle' size='lg'></box-icon>
+                      <box-icon name='right-arrow-circle' size='60px' color='rgb(50,50,50)'></box-icon>
             </button>
 
         )
@@ -126,7 +191,7 @@ export default function SignUp(){
     let orgLeftButton = () =>{
         return(
             <button className='org-left-button' onClick={leftBtnClicked}>
-                <box-icon name='left-arrow-circle' size='lg'></box-icon>
+                <box-icon name='left-arrow-circle' size='60px' color='rgb(50,50,50)'></box-icon>
             </button>
         )
     }
@@ -177,20 +242,21 @@ export default function SignUp(){
         }
 
     }
+
     const genericInput = ()=>{
         return(
             <>
                 <div className='signup-container signup-fname-container'>
                 <label for='fNameSignup'>First Name</label>
-                <input type="text" name='fnameSignup' placeholder='First Name' onKeyUp={changeFname} required={true}></input>
+                <input type="text" name='fnameSignup' placeholder='First Name' required={true}></input>
                 </div>
                 <div className='signup-container signup-lname-container'>
                 <label for="lNameSignup">Last Name</label>
-                <input type="text" name='lnameSignup' placeholder='Last Name' onKeyUp={changeLname}  required={true}></input>
+                <input type="text" name='lnameSignup' placeholder='Last Name' required={true}></input>
                 </div>
                 <div className='signup-container signup-email-container'>
                 <label for="emailSignup">Email</label>
-                <input type="email" name='emailSignup' placeholder='Email' onKeyUp={changeEmail}  required={true}></input>
+                <input type="email" name='emailSignup' placeholder='Email' required={true}></input>
                 </div>
                 <div className='signup-container signup-phone-container'>
                 <label for="emailSignup">Phone</label>
@@ -215,6 +281,8 @@ export default function SignUp(){
     function displayOrgPage(pageNumber){
         if(pageNumber === 1){
             return(
+                <>
+
                 <div className='org-page-one'>
                 <div className='company-name-container signup-container'>
                 <label for='companyNameSignup'>Company Name</label>
@@ -230,83 +298,86 @@ export default function SignUp(){
                  {orgRightButton()}
                 </div>
                 </div>
+                </>
             )
            
         }
         else if(pageNumber === 2){
             return(
+             
                 <div className='org-page-two'>
-                <h3>Choose a Price Plan</h3>
+                    <h3>Choose a Price Plan</h3>
+
                  <div className="num-of-employees-container signup-container">
-                <h3>Number of Employees</h3>
+
+                 <div className='num-of-employees-input-container'>
+
+                <div>
+                 <h4>Number of Employees</h4>
                 <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
+                </div>
+
+                </div>
+
+
+
+                <div>
                 {displayPricePlans(numOfEmployees)}
+                </div>
+                
                 </div>
               
                 
 
 
                 <div className='enter-card-details-container'>
-                    <h3>Enter Card Details</h3>
                     <form action ='/' onSumbit={handleSubmit}>
-                        <div className='card-details-style-container'>
-                        <label for='card-number'>Card Number</label>
-                        <input type="text"></input>
 
+                        <div className='card-details-style-container'>
+                        <h3>Enter Card Details</h3>
+                        <div>
+                        <label for='card-number'>Card Number</label>
+                        <input type="text" placeholder='Card Number' maxLength={16}></input>
+                        </div>
+
+
+                        <div className='card-detail-expr'>
                         <label for='expiration-date'>Expiration Date</label>
                         <input type="date"></input>
-                        <label for='cvv'>CVV</label>
-                        <input type='text'></input>
-
-                        <label for='billing-address'>Billing</label>
-                        <input type='text' placeholder='Address Line 1'></input>
-                        <input type='text' placeholder='Address Line 2 (Optional)'></input>
-                        <input type='text' placeholder='Zip Code'></input>
-                        <input type='text' placeholder='City'></input>
-
-                        <input list='state-providence-region-list' name='select-country-list' placeholder='State/Providence/Region' />
-                        <datalist id='state-providence-region-list'>
-                            <option value="">--State/Providence/Region--</option>
-                        </datalist>
-
-
-
-
-
-                        <input list='country-list' name='select-country-list' placeholder='Country' />
-                        <datalist id='country-list'>
-                            <option value="">--Country--</option>
-                        </datalist>
                         </div>
+
+                        <div className='cvv-style-container'>
+                        <label for='cvv'>CVV</label>
+                        <input type='password' placeholder="***" maxLength={3}></input>
+                        </div>
+                        </div>
+                     
                     
                     </form>
-                </div>
-                    <div className='org-left-btn'>
+                    <div className='page-change-btn-container'>
+                    <div>
                     {orgLeftButton()}
                     </div>
-                    <div className='org-right-btn'>
+                    <div>
                     {orgRightButton()}
                     </div>
+                    </div>
+                   
+                </div>
+
+
+
                 
                 </div>
+              
+
             )
 
         }
         else if(pageNumber === 3){
             return(
                 <>
-                <h3>Review</h3>
-                    <h4>First Name</h4>
-                    <p>{fname}</p>
-                    <h4>Last Name</h4>
-                    <p>{lname}</p>
-                    <h4>Email</h4>
-                    <p>{email}</p>
-                    <h4>Phone</h4>
-                    <p>{phone}</p>
-                    <h4>Price Plan</h4>
-                    <p>{phone}</p>
-                    {orgLeftButton()}
+                {billing()}
                 
                 </>
             )
@@ -330,7 +401,6 @@ export default function SignUp(){
         else{
             return(
             <form action='/' method="POST" className='signup-form-employee signup-form'>
-    
                 <div className='signup-companyId signup-container'>
                 <label for="companyIdSignup">Company ID</label>
                 <input type='text' name='companyId' placeholder='Company ID' max-length='5'></input>
@@ -349,26 +419,9 @@ export default function SignUp(){
         <>
         <Header signUpBtnDisplay={false} signInBtnDisplay={true} isHome={false} isPrice={false} />
         <section className='signup-section'>
-        <div className='signup-type-container'>
-        <div className='company-org-container'>
-        <div className='signup-header'>
-        <h2>Sign Up</h2>
-        </div>
-        <div className='signup-select-container'>
-            <label for='employee-or-org-select' className='signup-select-label'>Are you an Employee or Registering on behalf of an Organizaiton?</label>
-            <select name='employee-org-select' id='employee-or-org-select' onClick={type}>
-                <option value='org'>Organization</option>
-                <option value='employee'>Employee</option>
-            </select>
-        </div>
-        </div>
-        </div>
-
-
-
+        {signupType()}
         <div className='signup-official-container'>
             {displayFields(signUpType)}
-            
         </div>
 
         </section>
