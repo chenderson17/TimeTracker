@@ -79,8 +79,8 @@ export default function SignUp(){
     }
     const freeBtn = ()=>{
         return(
-            <div className='free-btn-container'>
-            <button className='signup-free-btn'>
+            <div className='free-btn-container plan-btn-container'>
+            <button className='signup-free-btn plan-btn'>
                 Free
             </button>
             <details>
@@ -96,8 +96,8 @@ export default function SignUp(){
     }
     const basicBtn = () =>{
         return(
-            <div className='basic-btn-container'>
-            <button>
+            <div className='basic-btn-container plan-btn-container'>
+            <button className='signup-basic-btn plan-btn'>
                 Basic
             </button>
 
@@ -117,8 +117,8 @@ export default function SignUp(){
     }
     const extraBtn = ()=>{
         return(
-            <div className='extra-btn-container'>
-            <button>
+            <div className='extra-btn-container plan-btn-container'>
+            <button className='extra-btn-container plan-btn'>
                 Extra
             </button>
             <details>
@@ -136,8 +136,8 @@ export default function SignUp(){
     }
     const premiumBtn = ()=>{
         return(
-            <div className='premium-btn-container'>
-            <button>
+            <div className='premium-btn-container plan-btn-container'>
+            <button className='premium-btn-container plan-btn'>
                 Premium
             </button>
             <details>
@@ -260,7 +260,7 @@ export default function SignUp(){
     }
     function orgFormPayment(fields){
         return(
-            <form action ='/' onSumbit={handleSubmit}>
+            <form action ='/' onSumbit={handleSubmit} className='org-form-payment'>
                 {fields()}
             </form>
 
@@ -293,15 +293,17 @@ export default function SignUp(){
     function orgPageTwoPaymentFields(){
         return(
             <div className='enter-card-details-container'>
-                        <div className='card-details-style-container'>
+                       <div className='card-details-header-container'>
                         <h3>Enter Card Details</h3>
-                        <div>
+                        </div>
+
+                        <div className='card-number-container'>
                         <label for='card-number'>Card Number</label>
                         <input type="text" placeholder='Card Number' maxLength={16}></input>
                         </div>
 
 
-                        <div className='card-detail-expr'>
+                        <div className='card-detail-expr-container'>
                         <label for='expiration-date'>Expiration Date</label>
                         <input type="date"></input>
                         </div>
@@ -310,7 +312,7 @@ export default function SignUp(){
                         <label for='cvv'>CVV</label>
                         <input type='password' placeholder="***" maxLength={3}></input>
                         </div>
-                        </div>
+                        
                     </div>
         )
 
@@ -333,15 +335,29 @@ export default function SignUp(){
             return(
              
                 <div className='org-page-two'>
+                    <div className='org-page-two-header'>
                     <h3>Choose a Price Plan</h3>
+                    </div>
+                    <div className='org-page-two-num'>
                     {orgForm(orgPageTwoFields)}
+                    </div>
+
+                    <div className='org-page-two-credit'>
                     {orgFormPayment(orgPageTwoPaymentFields)}
-                    <div className='page-change-btn-container'>
+                    </div>
+
+                    <div className='org-page-two-billing'>
+                    {orgFormPayment(billing)}
+                    </div>
+                    <div className='create-an-account-button-container'>
+                        {createAccountBtn()}
+                    </div>
+                    <div className='page-two-change-btn-container'>
+                    <div>
                     {orgLeftButton()}
                     </div>
-                    <div>
-                    {orgRightButton()}
                     </div>
+                    
               </div>
             )
 
@@ -373,7 +389,7 @@ export default function SignUp(){
 
 
      function displayFields(signUpType){
-        if(signUpType == "org"){
+        if(signUpType === "org"){
         return(
             <>
              {displayOrgPage(orgPageNumber)}
