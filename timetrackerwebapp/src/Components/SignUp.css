@@ -334,7 +334,7 @@
     border:none;
     outline:none;
 }
-.org-btn-container-right{
+.solo-btn{
     display: flex;
     justify-content: center;
     align-items: center;

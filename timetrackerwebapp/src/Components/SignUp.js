@@ -51,7 +51,7 @@ export default function SignUp(){
                         </datalist>
                         </div>
                         </div>
-                        <div className='org-left-btn-container'>
+                        <div className='solo-btn'>
                     {orgLeftButton()}
                     </div>
                         </div>
@@ -294,7 +294,7 @@ export default function SignUp(){
 
 
 
-                <div className='org-btn-container-right'>
+                <div className='solo-btn'>
                  {orgRightButton()}
                 </div>
                 </div>
