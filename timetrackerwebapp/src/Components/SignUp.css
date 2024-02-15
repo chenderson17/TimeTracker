@@ -192,12 +192,13 @@
 
 .org-page-two  > * {
     border:solid 1px orange;
+    padding:1rem;
    
 }
 .org-page-two label{
     font-weight: 500;
 }
-.org-page-two h3{
+.org-page-two-header {
     grid-row-start:1;
     grid-column-start:1;
     grid-column-end:3;
@@ -268,12 +269,12 @@
     grid-column-start:2;
 
 }
-.enter-card-details-container div input, .billing-address-container{
+.enter-card-details-container div input, .billing-address-container input{
     display: block;
     width:15rem;
-    padding:1rem;
+    padding:0.55rem;
     border-radius: 4px;
-    border:none;
+    border:1px solid rgb(121,121,121);
 }
 .enter-card-details-container label{
     font-weight: 600;
@@ -373,7 +374,11 @@
 }
 .org-page-two .create-an-account-button-container{
     grid-row-start:5;
-    grid-column-start:2;
+    grid-column-start:1;
+}
+.org-page-two .create-an-account-button-container{
+    width: 45%;
+    margin: 0 auto;
 }
 .org-right-button , .org-left-button {
     background-color: transparent;

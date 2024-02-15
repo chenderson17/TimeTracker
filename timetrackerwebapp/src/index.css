@@ -24,7 +24,9 @@ a{
 }
 
 
-
+input{
+  font-family: 'Poppins', sans-serif;
+}
 .display-none{
   display:none;
 }
