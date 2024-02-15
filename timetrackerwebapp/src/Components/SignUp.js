@@ -47,9 +47,6 @@ export default function SignUp(){
                         </datalist>
                         </div>
                         </div>
-                        <div className='solo-btn'>
-                    {orgLeftButton()}
-                    </div>
                         </div>
         )
     }
@@ -261,6 +258,14 @@ export default function SignUp(){
        </>
         )
     }
+    function orgFormPayment(fields){
+        return(
+            <form action ='/' onSumbit={handleSubmit}>
+                {fields()}
+            </form>
+
+        )
+    }
     function orgPageOneFields (){
         return(
         <div className='org-page-one'>
@@ -273,50 +278,21 @@ export default function SignUp(){
 
         )
     }
-    function displayOrgPage(pageNumber){
-        if(pageNumber === 1){
-            return(
-
-                <div>
-                {orgForm(orgPageOneFields)}
-                <div className='solo-btn'>
-                 {orgRightButton()}
-                </div>
-                </div>
-                
-            )
-           
-        }
-        else if(pageNumber === 2){
-            return(
-             
-                <div className='org-page-two'>
-                    <h3>Choose a Price Plan</h3>
-
-                 <div className="num-of-employees-container signup-container">
+    function orgPageTwoFields(){
+        return(
+            <div className="num-of-employees-container signup-container">
 
                  <div className='num-of-employees-input-container'>
-
-                <div>
                  <h4>Number of Employees</h4>
                 <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
                 </div>
-
-                </div>
-
-
-
-                <div>
                 {displayPricePlans(numOfEmployees)}
                 </div>
-                
-                </div>
-              
-                
-
-
-                <div className='enter-card-details-container'>
-                    <form action ='/' onSumbit={handleSubmit}>
+        )
+    }
+    function orgPageTwoPaymentFields(){
+        return(
+            <div className='enter-card-details-container'>
                         <div className='card-details-style-container'>
                         <h3>Enter Card Details</h3>
                         <div>
@@ -335,35 +311,50 @@ export default function SignUp(){
                         <input type='password' placeholder="***" maxLength={3}></input>
                         </div>
                         </div>
-                     
-                    
-                    </form>
+                    </div>
+        )
+
+    }
+    function displayOrgPage(pageNumber){
+        if(pageNumber === 1){
+            return(
+
+                <div className='org-page-one'>
+                {orgForm(orgPageOneFields)}
+                <div className='solo-btn'>
+                 {orgRightButton()}
+                </div>
+                </div>
+                
+            )
+           
+        }
+        else if(pageNumber === 2){
+            return(
+             
+                <div className='org-page-two'>
+                    <h3>Choose a Price Plan</h3>
+                    {orgForm(orgPageTwoFields)}
+                    {orgFormPayment(orgPageTwoPaymentFields)}
                     <div className='page-change-btn-container'>
-                    <div>
                     {orgLeftButton()}
                     </div>
                     <div>
                     {orgRightButton()}
                     </div>
-                    </div>
-                   
-                </div>
-
-
-
-                
-                </div>
-              
-
+              </div>
             )
 
         }
         else if(pageNumber === 3){
             return(
                 <>
-                {billing()}
-                
-                </>
+               {orgFormPayment(billing)}
+               {createAccountBtn()}
+                <div className='solo-btn'>
+                    {orgLeftButton()}
+                </div>
+            </>
             )
 
         }

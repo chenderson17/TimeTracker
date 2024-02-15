@@ -57,7 +57,7 @@ input[type="radio"]:checked {
     gap:0.5rem;
 }
 .pricing-radio label{
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 .pricing-cards{
     display: flex;
