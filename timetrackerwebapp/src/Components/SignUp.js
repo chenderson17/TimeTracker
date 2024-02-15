@@ -6,10 +6,6 @@ export default function SignUp(){
     const[signUpType, setSignUpType] = useState("org");
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const [orgPageNumber, setPageNumber] = useState(1);
-    const [fname, setFname] = useState("");
-    const[lname, setLname] = useState("");
-    const [email, setEmail] = useState("");
-    const[phone, setPhone] = useState("");
     const[priceDetails, setPriceDetails] = useState("");
     const billing = ()=>{
         return(
@@ -59,7 +55,7 @@ export default function SignUp(){
     }
     const signupType = ()=>{
         return(
-            <div className='signup-type-container'>
+            <div className= {orgPageNumber > 1 ? 'display-none' : 'signup-type-container'}>
             <div className='company-org-container'>
             <div className='signup-header'>
             <h2>Sign Up</h2>
@@ -77,24 +73,9 @@ export default function SignUp(){
         )
     }
 
-    function changeFname (event){
-        setFname(event.target.value);
-    }
-    function changeLname (event){
-        setLname(event.target.value);
-    }
-    function changeEmail (event){
-        setEmail(event.target.value);
-    }
-    function changePhone (event){
-        setPhone(event.target.value);
-    }
-    function changePrice (event){
-        setPriceDetails(event.target.value);
-    }
     const createAccountBtn = () =>{
         return(
-        <button type='submit'>
+        <button className='signup-submit-btn' type='submit'>
             Create Account
         </button>
         )
@@ -260,7 +241,7 @@ export default function SignUp(){
                 </div>
                 <div className='signup-container signup-phone-container'>
                 <label for="emailSignup">Phone</label>
-                <input type="tel" name='phoneSignup' placeholder='Phone' onKeyUp={changePhone}  required={true}></input>
+                <input type="tel" name='phoneSignup' placeholder='Phone' required={true}></input>
                 </div>
                 <div className='signup-container signup-password-container'>
                 <label for='passwordSignup'>Password</label>
@@ -270,35 +251,39 @@ export default function SignUp(){
         )
 
     }
-    const createAButton = (text)=>{
+
+    function orgForm(fields){
         return(
-            
-            <button type='submit' name='signUpSubmitBtn'>{text}</button>
+        <>
+        <form action="/" method="POST" className='signup-form-org signup-form ' onSubmit={handleSubmit}>
+            {fields()}
+       </form>
+       </>
         )
     }
+    function orgPageOneFields (){
+        return(
+        <div className='org-page-one'>
+        <div className='company-name-container signup-container'>
+        <label for='companyNameSignup'>Company Name</label>
+        <input type='text' name='companyNameSignup' placeholder='Company Name'  required={true}></input>
+        </div>
+        {genericInput()}
+        </div>
 
-
+        )
+    }
     function displayOrgPage(pageNumber){
         if(pageNumber === 1){
             return(
-                <>
 
-                <div className='org-page-one'>
-                <div className='company-name-container signup-container'>
-                <label for='companyNameSignup'>Company Name</label>
-                <input type='text' name='companyNameSignup' placeholder='Company Name'  required={true}></input>
-                </div>
-
-
-                {genericInput()}
-
-
-
+                <div>
+                {orgForm(orgPageOneFields)}
                 <div className='solo-btn'>
                  {orgRightButton()}
                 </div>
                 </div>
-                </>
+                
             )
            
         }
@@ -332,7 +317,6 @@ export default function SignUp(){
 
                 <div className='enter-card-details-container'>
                     <form action ='/' onSumbit={handleSubmit}>
-
                         <div className='card-details-style-container'>
                         <h3>Enter Card Details</h3>
                         <div>
@@ -390,16 +374,25 @@ export default function SignUp(){
 
 
      function type (event) {setSignUpType(event.target.value);}
+
+
+
+
+
+
+
      function displayFields(signUpType){
         if(signUpType == "org"){
         return(
-            <form action="/" method="POST" className='signup-form-org signup-form ' onSubmit={handleSubmit}>
-               {displayOrgPage(orgPageNumber)}
-            </form>
+            <>
+             {displayOrgPage(orgPageNumber)}
+            
+            </>
         )
         }
         else{
             return(
+                <>
             <form action='/' method="POST" className='signup-form-employee signup-form'>
                 <div className='signup-companyId signup-container'>
                 <label for="companyIdSignup">Company ID</label>
@@ -412,9 +405,11 @@ export default function SignUp(){
                 </div>
 
             </form>
+            </>
             )
         }
      }
+
     return(
         <>
         <Header signUpBtnDisplay={false} signInBtnDisplay={true} isHome={false} isPrice={false} />
