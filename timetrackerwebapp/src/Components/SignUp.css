@@ -187,14 +187,18 @@
 .org-page-two{
     grid-template-rows:repeat(5,auto);
     grid-template-columns:repeat(2,auto);
+    gap:1rem;
 }
 
 
 .org-page-two  > * {
-    border:solid 1px orange;
     padding:1rem;
-   
 }
+.org-page-two-num, .org-page-two-credit, .org-page-two-billing {
+    border:solid 1px rgb(0,0,0);
+    border-radius:4px;
+}
+
 .org-page-two label{
     font-weight: 500;
 }
@@ -205,11 +209,18 @@
     text-align: center;
     font-size:1.4em;
 }
-.org-page-two-num{
-    grid-row-start:2;
+.org-page-two-num {
+    grid-row-start:3;
     grid-row-end:5;
-
 }
+details  ul {
+    margin-left:1.5rem;
+}
+.org-page-two-num form{
+    margin:0 auto;
+}
+
+
 .price-btn-container{
     display: flex;
     background-color: rgb(255,255,255);
@@ -231,10 +242,6 @@
     font-weight: 500;
 }
 .num-of-employees-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: 'Poppins', sans-serif;
 }
 .org-page-two .signup-form-org{
@@ -242,9 +249,7 @@
     grid-row-end:4;
 }
 
-.num-of-employees-container div h4{
-    margin-bottom:0.5rem;
-}
+
 .num-of-employees-input-container{
     padding:1.5rem;
 }
@@ -272,9 +277,12 @@
 .enter-card-details-container div input, .billing-address-container input{
     display: block;
     width:15rem;
-    padding:0.55rem;
+    padding:0.6rem;
     border-radius: 4px;
     border:1px solid rgb(121,121,121);
+}
+.billing-address-container input{
+    padding:0.55rem
 }
 .enter-card-details-container label{
     font-weight: 600;
@@ -345,7 +353,6 @@
 }
 
 .billing-address-container-header{
-    text-align: center;
     font-size:1.3em;
 }
 .billing-address-container-header h4{

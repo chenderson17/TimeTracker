@@ -280,10 +280,12 @@ export default function SignUp(){
     }
     function orgPageTwoFields(){
         return(
-            <div className="num-of-employees-container signup-container">
+            <div className="num-of-employees-container">
 
                  <div className='num-of-employees-input-container'>
-                 <h4>Number of Employees</h4>
+                    <div>
+                 <h3>Number of Employees</h3>
+                 </div>
                 <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
                 </div>
                 {displayPricePlans(numOfEmployees)}
@@ -335,11 +337,14 @@ export default function SignUp(){
             return(
              
                 <div className='org-page-two'>
+                    
                     <div className='org-page-two-header'>
                     <h3>Choose a Price Plan</h3>
                     </div>
                     <div className='org-page-two-num'>
+                        <div className='org-num-style-container'>
                     {orgForm(orgPageTwoFields)}
+                        </div>
                     </div>
 
                     <div className='org-page-two-credit'>
