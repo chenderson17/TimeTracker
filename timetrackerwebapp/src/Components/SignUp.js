@@ -6,11 +6,61 @@ export default function SignUp(){
     const[signUpType, setSignUpType] = useState("org");
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const [orgPageNumber, setPageNumber] = useState(1);
-    const[priceDetails, setPriceDetails] = useState("");
+    const[priceDetails, setPriceDetails] = useState(0.00);
+    const[planDetails, setPlanDetails] = useState("");
+    const planDescriptions = function (plan){
+        if(plan=='free'){ 
+            return(
+            <ul>
+            <li>Basic Time Tracking</li>
+            <li>Single User Access</li>
+            <li>Basic Reporting</li>
+            </ul>
+            )
+        }
+        else if(plan == 'basic'){
+            return (
+            <ul>
+                <li>$10.00/month</li>
+                <li>Enhanced Time Tracking</li>
+                <li>Multi-User Access</li>
+                <li>Export Data</li>
+                <li>Basic Analytics Dashboard</li>
+              
+                </ul>
+            )
+        }
+        else if(plan == 'extra'){
+            return (
+            <ul>
+                <li>$25.00/month</li>
+                <li>Advanced Time Tracking</li>
+                <li>Project Budgeting</li>
+                <li>Customizable Reports</li>
+                <li>Priority Customer Support</li>
+                </ul>
+            )
+        }
+        else if(plan == 'premium'){
+            return (
+            <ul>
+                <li>$50.00/month</li>
+                <li>Unlimited Users</li>
+                <li>Advanced Analytics Dashboard</li>
+                <li>Resource Planning</li>
+                <li>Priority Customer Support</li>
+              
+            </ul>
+            )
+
+        }
+    }
+
     const billing = ()=>{
         return(
         <div className='billing-address-container'>
                         <div className="billing-address-container-header">
+                         
                         <h4>Billing</h4>
                         </div>
                         <div className='billing-style-container'>
@@ -85,11 +135,7 @@ export default function SignUp(){
             </button>
             <details>
                 <summary>More Info</summary>
-                <ul>
-                <li>Basic Time Tracking</li>
-                <li>Single User Access</li>
-                <li>Basic Reporting</li>
-                </ul>
+                {planDescriptions('free')}
             </details>
             </div>
         )
@@ -103,18 +149,13 @@ export default function SignUp(){
 
             <details>
                 <summary>More Info</summary>
-                <ul>
-                <li>Enhanced Time Tracking</li>
-                <li>Multi-User Access</li>
-                <li>Export Data</li>
-                <li>Basic Analytics Dashboard</li>
-              
-                </ul>
+                {planDescriptions('basic')}
             </details>
 
             </div>
         )
     }
+    
     const extraBtn = ()=>{
         return(
             <div className='extra-btn-container plan-btn-container'>
@@ -122,14 +163,7 @@ export default function SignUp(){
                 Extra
             </button>
             <details>
-                <summary>More Info</summary>
-                <ul>
-                <li>Advanced Time Tracking</li>
-                <li>Project Budgeting</li>
-                <li>Customizable Reports</li>
-                <li>Priority Customer Support</li>
-              
-                </ul>
+            {planDescriptions('extra')}
             </details>
             </div>
         )
@@ -142,13 +176,7 @@ export default function SignUp(){
             </button>
             <details>
                 <summary>More Info</summary>
-                <ul>
-                <li>Unlimited Users</li>
-                <li>Advanced Analytics Dashboard</li>
-                <li>Resource Planning</li>
-                <li>Priority Customer Support</li>
-              
-                </ul>
+                {planDescriptions('premium')}
             </details>
             </div>
             
@@ -319,6 +347,31 @@ export default function SignUp(){
         )
 
     }
+    function subtotal(cost,plan){
+        const tax = 5.95;
+        return(
+            <div className='subtotal-section'>
+            <div className='signup-subtotal-container'>
+                <div className='signup-plan-container'>
+                <h3>{plan}</h3>
+            </div>
+            <div className='signup-subtotal-cost-container subtotal-container'>
+            <h4>Subtotal</h4>
+            <little>${cost}</little>
+            </div>
+            <div className='signup-subtotal-tax-container subtotal-container'>
+            <h4>Tax</h4>
+            <little>${tax}</little>
+            </div>
+
+            <div className='signup-total-container subtotal-container'>
+                <h4>Total</h4>
+                <little>${cost + tax}</little>
+            </div>
+            </div>
+            </div>
+        )
+    }
     function displayOrgPage(pageNumber){
         if(pageNumber === 1){
             return(
@@ -344,10 +397,12 @@ export default function SignUp(){
                     <div className='org-page-two-num'>
                         <div className='org-num-style-container'>
                     {orgForm(orgPageTwoFields)}
+                    {subtotal(40,'Basic')}
                         </div>
                     </div>
 
                     <div className='org-page-two-credit'>
+                        
                     {orgFormPayment(orgPageTwoPaymentFields)}
                     </div>
 
@@ -357,6 +412,7 @@ export default function SignUp(){
                     <div className='create-an-account-button-container'>
                         {createAccountBtn()}
                     </div>
+                
                     <div className='page-two-change-btn-container'>
                     <div>
                     {orgLeftButton()}

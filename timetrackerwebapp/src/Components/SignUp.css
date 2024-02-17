@@ -25,10 +25,6 @@
     justify-content: center;
     padding:2rem;
 }
-.signup-official-container{
-    
-    
-}
 
 .signup-container{
     display: block;
@@ -65,7 +61,7 @@
     margin-bottom:0.5em;
     font-weight: 600;
 }
-.signup-form-employee{
+.signup-form-employee, .org-page-one .signup-form-org{
     border:1.2px solid rgb(121,121,121);
     border-radius:5px;
     
@@ -82,6 +78,31 @@
 
 
 
+}
+.signup-plan-container{
+    text-align:center;
+    font-size: 1.1em;
+}
+.subtotal-section{
+    border:solid 1px rgb(121,121,121);
+    border-radius: 4px;
+}
+
+.subtotal-section{
+    margin-top:5rem;
+    padding:1.5rem;
+}
+.subtotal-container{
+    display: flex;
+    justify-content:space-between;
+    padding:0.7rem;
+    
+}
+.signup-subtotal-tax-container{
+    border-bottom: dotted rgb(121,121,121) 1px;
+}
+.signup-total-container{
+    margin-top:0.5rem;
 }
 
 .signup-form-employee{
@@ -130,12 +151,6 @@
     width: 100%;
 }
 
-.signup-fname-container{
-
-}
-.signup-lname-container{
-  
-}
 .create-an-account-button-container{
     grid-row-start:5;
     grid-column-start:1;
@@ -212,6 +227,9 @@
 .org-page-two-num {
     grid-row-start:3;
     grid-row-end:5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 details  ul {
     margin-left:1.5rem;
