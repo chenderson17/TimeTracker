@@ -18,7 +18,7 @@ button{
 
 }
 
-a{
+a, details{
   cursor: pointer;
   font-family:'Poppins', sans-serif
 }

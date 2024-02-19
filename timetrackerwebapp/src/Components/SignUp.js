@@ -1,13 +1,17 @@
 import Header from './Header.js';
 import React, { useState } from 'react';
 import './SignUp.css';
+import SignUpEmployee from './SignUpEmployee.js';
 
 export default function SignUp(){
     const[signUpType, setSignUpType] = useState("org");
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const [orgPageNumber, setPageNumber] = useState(1);
     const[priceDetails, setPriceDetails] = useState(0.00);
-    const[planDetails, setPlanDetails] = useState("");
+    const[planDetails, setPlanDetails] = useState("Free");
+    function priceBtnOnClick (plan){
+        
+    }
     const planDescriptions = function (plan){
         if(plan=='free'){ 
             return(
@@ -163,6 +167,7 @@ export default function SignUp(){
                 Extra
             </button>
             <details>
+                <summary>More Info</summary>
             {planDescriptions('extra')}
             </details>
             </div>
@@ -348,16 +353,16 @@ export default function SignUp(){
 
     }
     function subtotal(cost,plan){
-        const tax = 5.95;
+        const tax = priceDetails * 0.09;
         return(
             <div className='subtotal-section'>
             <div className='signup-subtotal-container'>
                 <div className='signup-plan-container'>
-                <h3>{plan}</h3>
+                <h3>{planDetails}</h3>
             </div>
             <div className='signup-subtotal-cost-container subtotal-container'>
             <h4>Subtotal</h4>
-            <little>${cost}</little>
+            <little>${priceDetails}</little>
             </div>
             <div className='signup-subtotal-tax-container subtotal-container'>
             <h4>Tax</h4>
@@ -366,7 +371,7 @@ export default function SignUp(){
 
             <div className='signup-total-container subtotal-container'>
                 <h4>Total</h4>
-                <little>${cost + tax}</little>
+                <little>${priceDetails + tax}</little>
             </div>
             </div>
             </div>
@@ -460,20 +465,7 @@ export default function SignUp(){
         }
         else{
             return(
-                <>
-            <form action='/' method="POST" className='signup-form-employee signup-form'>
-                <div className='signup-companyId signup-container'>
-                <label for="companyIdSignup">Company ID</label>
-                <input type='text' name='companyId' placeholder='Company ID' max-length='5'></input>
-                </div>
-                {genericInput()}
-
-                <div className='create-an-account-button-container'>
-                {createAccountBtn()}
-                </div>
-
-            </form>
-            </>
+             <SignUpEmployee />
             )
         }
      }
