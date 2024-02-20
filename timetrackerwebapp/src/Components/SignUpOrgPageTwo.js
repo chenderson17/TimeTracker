@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
-
+import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 export default function SignUpOrgPageTwo({orgLeftButton}){
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
+    const [currentPlan, setCurrentPlan] = useState("Free");
     const tax = priceDetails * 1.67;
     function getEmployeeNumber(event){
         setNumOfEmployees(event.target.value);
@@ -43,6 +44,7 @@ export default function SignUpOrgPageTwo({orgLeftButton}){
                         <label for='cvv'>CVV</label>
                         <input type='password' placeholder="***" maxLength={3}></input>
                         </div>
+                        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={10} />
                         
         </div>
 
@@ -96,7 +98,7 @@ export default function SignUpOrgPageTwo({orgLeftButton}){
         <div className='subtotal-section'>
             <div className='signup-subtotal-container'>
                 <div className='signup-plan-container'>
-                <h3>{planDetails}</h3>
+                <h3>{currentPlan}</h3>
             </div>
             <div className='signup-subtotal-cost-container subtotal-container'>
             <h4>Subtotal</h4>

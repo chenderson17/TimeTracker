@@ -1,11 +1,9 @@
-import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 import React from "react";
 import { useState } from "react";
 import SignUpOrgPageOne from './SignUpOrgPageOne.js';
 import SignUpOrgPageTwo from './SignUpOrgPageTwo.js';
 export default function SignUpOrg(){
     const [orgPageNumber, setPageNumber] = useState(1);
-    const [currentPlan, setCurrentPlan] = useState("Free");
 
     let orgRightButton = ()=>{
         return(
@@ -40,7 +38,7 @@ export default function SignUpOrg(){
     }
     return(
         <>
-       <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={10} />
+       <SignUpOrgPageTwo orgLeftButton={orgLeftButton} />
        </>
     )
 
