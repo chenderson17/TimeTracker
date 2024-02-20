@@ -27,18 +27,10 @@ export default function SignUpOrg(){
     function leftBtnClicked(){
         setPageNumber(orgPageNumber - 1);
     }
-
-    function pageOne(){
-        return(
-          <>
-          <SignUpOrgPageTwo orgLeftButton={orgLeftButton} />
-          </>
-        )
-    
-    }
+    const pages = [<SignUpOrgPageOne pageNumber={orgPageNumber} orgRightButton={orgRightButton} />, <SignUpOrgPageTwo orgLeftButton={orgLeftButton} />]
     return(
         <>
-       <SignUpOrgPageTwo orgLeftButton={orgLeftButton} />
+        {pages[orgPageNumber - 1]}
        </>
     )
 
