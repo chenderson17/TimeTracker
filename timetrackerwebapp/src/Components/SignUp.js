@@ -2,6 +2,7 @@ import Header from './Header.js';
 import React, { useState } from 'react';
 import './SignUp.css';
 import SignUpEmployee from './SignUpEmployee.js';
+import SignUpOrg from './SignUpOrg.js';
 
 export default function SignUp(){
     const[signUpType, setSignUpType] = useState("org");
@@ -458,7 +459,7 @@ export default function SignUp(){
         if(signUpType === "org"){
         return(
             <>
-             {displayOrgPage(orgPageNumber)}
+             <SignUpOrg />
             
             </>
         )

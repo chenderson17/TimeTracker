@@ -1,5 +1,5 @@
 import React from "react"; 
-export default function SignUpButtonClass(planName, planDescription, classes){
+export default function SignUpButtonClass({planName, planDescription, onClickMethod, val, classes}){
     function generateDescriptionList(){
         return(
             <ul>
@@ -10,13 +10,13 @@ export default function SignUpButtonClass(planName, planDescription, classes){
         )
     }
     return(
-        <div className={classes}>
-        <button className='signup-free-btn plan-btn'>
+        <div>
+        <button className={classes} value={val} onClick={onClickMethod}>
         {planName}
         </button>
         <details>
             <summary>More Info</summary>
-            {generateDescriptionList}
+            {generateDescriptionList()}
         </details>
         </div>
     )
