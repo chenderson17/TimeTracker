@@ -1,4 +1,4 @@
-.signup-employee-form{
+.signup-employee-form, .signup-org-info-form{
     display: grid;
     grid-template-rows:repeat(5,auto);
     grid-template-columns:repeat(2,auto);
@@ -6,25 +6,25 @@
     padding:2rem;
     border-radius: 5px;
 }
-.employee-signup-container input{
+.employee-signup-container input, .org-signup-container input{
     display: block;
     padding:0.6rem;
     border-radius: 5px;
     border:1px solid rgb(121,121,121);
     width:15rem;
 }
-.employee-signup-container label{
+.employee-signup-container label, .org-signup-container label{
     font-weight: 500;
     font-size:0.9em;
     margin-bottom:1rem;
 }
-.signup-companyid-container{
+.signup-companyid-container, .signup-companyname-container{
     grid-row-start:1;
     grid-column-start:1;
     grid-column-end:3;
 
 }
-.signup-companyid-container input, .signup-password-container input{
+.signup-companyid-container input, .signup-password-container input, .signup-companyname-container input{
     width: 100%;
 }
 .signup-password-container{
@@ -45,4 +45,9 @@
     padding:0.5rem;
     border:none;
     border-radius: 2px;
+}
+.orgrightbutton-page-one{
+    display: flex;
+    justify-content: center;
+    grid-row-start:5;
 }
