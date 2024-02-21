@@ -1,9 +1,16 @@
+.signup-official-container{
+    border:1px solid #242526;
+    padding:2rem;
+    border-radius:15px;
+}
+
 .signup-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-content: center;
     padding:2rem;
     margin-top:1rem;
+
     
 }
 .signup-header{
@@ -15,11 +22,15 @@
     font-size:1.9em;
 }
 .signup-type-container{
-    width: 50%;
+    color:rgb(255,255,255);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:2rem;
+    padding:10rem 2rem;
+    background-color:#242526;
+    
+    border-radius: 15px;
+
 }
 
 .signup-container{
@@ -41,7 +52,8 @@
     background-color: rgb(255,255,255);
     font-size:1em;
     width:40rem;
-    border:2px solid rgb(0,0,0);
+    color:#242526;
+    border:2px solid rgb(255,255,255);
     cursor:pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -52,21 +64,10 @@
 .signup-select-container select option{
    padding: 1rem;
 }
-.signup-container label{
-    display: block;
-    margin-bottom:0.5em;
-    font-weight: 600;
-}
 .signup-form-employee, .org-page-one .signup-form-org{
     border:1.2px solid rgb(121,121,121);
     border-radius:5px;
     
-}
-.signup-form input{
-    width: 20rem;
-    border-radius: 5px;
-    border:1px solid rgb(0,0,0);
-    padding: 1rem;
 }
 
 .signup-plan-container{
@@ -95,132 +96,11 @@
     margin-top:0.5rem;
 }
 
-.signup-form-employee{
-   padding:1rem;
-   display:grid;
-   grid-template-rows:repeat(4,1fr);
-   grid-template-columns: repeat(2,1fr);
-   border-radius: 5px;
-}
-.signup-fname-container{
-    grid-row-start:2;
-}
-.signup-lname-container{
-    grid-row-start:2;
-    grid-column-start:2;
-}
-.signup-email-container{
-    grid-row-start:3;
-    grid-column-start:1;
-    grid-column-end:3;
-}
-.signup-phone-container{
-    grid-row-start:3;
-    grid-column-start:2;
-    grid-column-end:3;
-}
-.signup-password-container{
-    grid-row-start:4;
-    grid-column-start:1;
-    grid-column-end:3;
-}
-.signup-password-container input{
-    width: 100%;
-}
-
-.signup-form-employee > *, .org-page-one > *{
-    padding:1rem;
-}
-.signup-companyId{
-    grid-row-start:1;
-    grid-column-start:1;
-    grid-column-end:3;
-    
-}
-.signup-companyId input, .company-name-container input{
-    width: 100%;
-}
-
-.create-an-account-button-container{
-    grid-row-start:5;
-    grid-column-start:1;
-    grid-column-end:3;
-  
-}
-.create-an-account-button-container button{
-    width: 100%;
-    font-weight: 600;
-    padding:1rem;
-    margin:0 auto;
-
-}
-.org-page-one{
-    
-    display:grid;
-    grid-template-rows:repeat(1fr,5);
-    grid-template-columns: repeat(1fr,2);
-    padding:1rem;
-    
-}
-.org-btn-container-right{
-    grid-row-start:5;
-    grid-column-start:2;
-}
-.company-name-container{
-    grid-row-start:1;
-    grid-column-start:1;
-    grid-column-end:3;
-}
-.org-left-right-btn-container{
-    grid-row-start:4;
-}
-.org-page-two{
-    display: grid;
-    flex-direction: column;
-   
-}
-.org-left-btn{
-    grid-row-start:4;
-    grid-column-start:1;
-    margin:0 auto;
-}
-.org-right-btn{
-    grid-row-start:4;
-    grid-column-start:2;
-    margin:0 auto;
-}
-.org-page-two{
-    grid-template-rows:repeat(5,auto);
-    grid-template-columns:repeat(2,auto);
-    gap:1rem;
-}
 
 
-.org-page-two  > * {
-    padding:1rem;
-}
-.org-page-two-num, .org-page-two-credit, .org-page-two-billing {
-    border:solid 1px rgb(0,0,0);
-    border-radius:4px;
-}
 
-.org-page-two label{
-    font-weight: 500;
-}
-.org-page-two-header {
-    grid-row-start:1;
-    grid-column-start:1;
-    grid-column-end:3;
-    text-align: center;
-    font-size:1.4em;
-}
-.org-page-two-num {
-    grid-row-start:3;
-    grid-row-end:5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
+
 details  ul {
     margin-left:1.5rem;
 }
@@ -231,16 +111,6 @@ details  ul {
 
 
 
-
-
-.num-of-employees-input-container{
-    padding:1.5rem;
-}
-
-.num-of-employees-container input{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-}
 
 .enter-card-details-container{
     display:grid;
@@ -373,13 +243,7 @@ details  ul {
     outline:none;
 }
 
-.solo-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column-start:1;
-    grid-column-end:3;
-}
+
 
 
 .free-btn-container button{

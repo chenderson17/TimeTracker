@@ -1,0 +1,48 @@
+.signup-employee-form{
+    display: grid;
+    grid-template-rows:repeat(5,auto);
+    grid-template-columns:repeat(2,auto);
+    gap:1.9rem;
+    padding:2rem;
+    border-radius: 5px;
+}
+.employee-signup-container input{
+    display: block;
+    padding:0.6rem;
+    border-radius: 5px;
+    border:1px solid rgb(121,121,121);
+    width:15rem;
+}
+.employee-signup-container label{
+    font-weight: 500;
+    font-size:0.9em;
+    margin-bottom:1rem;
+}
+.signup-companyid-container{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+
+}
+.signup-companyid-container input, .signup-password-container input{
+    width: 100%;
+}
+.signup-password-container{
+    grid-row-start:4;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.employee-create-an-account-button-container{
+    grid-row-start:5;
+    grid-column-start:1;
+    grid-column-end:3;
+    display: flex;
+    justify-content: center;
+}
+.employee-create-an-account-button-container button{
+    font-weight: 500;
+    width: 18rem;
+    padding:0.5rem;
+    border:none;
+    border-radius: 2px;
+}

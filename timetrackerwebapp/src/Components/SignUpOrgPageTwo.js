@@ -2,11 +2,11 @@ import React from "react";
 import { useState } from "react";
 import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
-    const [numOfEmployees, setNumOfEmployees] = useState(0);
+    const [numOfEmployees, setNumOfEmployees] = useState(1);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
     const [currentPlan, setCurrentPlan] = useState("Free");
-    const tax = priceDetails * 1.67;
+    const tax = Math.round(priceDetails * 5.70) / 100;
     function getEmployeeNumber(event){
         setNumOfEmployees(event.target.value);
     }

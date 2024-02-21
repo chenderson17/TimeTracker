@@ -1,13 +1,15 @@
 import React from "react";
 
-
-
 export default function SignUpOrgPageOne({pageNumber, orgRightButton, formBehaviour}){
 
     return(
         <section className='signup-org-page-one-section'>
-        <form action='/' className='signup-org-info-form' method="POST" onSubmit={formBehaviour}> 
-         <div className='signup-container signup-fname-container'>
+        <form action='/' className='signup-org-info-form' method="POST" onSubmit={formBehaviour}>
+        <div className='signup-container signup-companyname-container'>
+                    <label for='companyName'>Company Name</label>
+                    <input type="text" name='companyName' placeholder='Company Name' required={true}></input>
+                    </div> 
+                    <div className='signup-container signup-fname-container'>
                     <label for='fNameSignup'>First Name</label>
                     <input type="text" name='fnameSignup' placeholder='First Name' required={true}></input>
                     </div>
@@ -26,7 +28,7 @@ export default function SignUpOrgPageOne({pageNumber, orgRightButton, formBehavi
                     <div className='signup-container signup-password-container'>
                     <label for='passwordSignup'>Password</label>
                     <input type="password" name='passwordSignup' placeholder='Password'  required={true}></input>
-                    </div>
+    </div>
         </form>
             {orgRightButton()}
         </section>
