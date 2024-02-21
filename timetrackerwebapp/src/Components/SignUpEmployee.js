@@ -1,8 +1,8 @@
 import React from "react"
-export default function SignUpEmployee(){
+export default function SignUpEmployee({formBehaviour}){
     return(
     <section className='signup-employee-section'>
-        <form action="/" className="signup-employee-form" method='POST'> 
+        <form action="/" className="signup-employee-form" method='POST' onSumbit={formBehaviour}> 
 
         <div className='signup-companyId signup-container'>
                 <label for="companyIdSignup">Company ID</label>

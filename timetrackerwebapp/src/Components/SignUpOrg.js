@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import SignUpOrgPageOne from './SignUpOrgPageOne.js';
 import SignUpOrgPageTwo from './SignUpOrgPageTwo.js';
-export default function SignUpOrg(){
+export default function SignUpOrg({formBehaviour}){
     const [orgPageNumber, setPageNumber] = useState(1);
 
     let orgRightButton = ()=>{
@@ -27,7 +27,7 @@ export default function SignUpOrg(){
     function leftBtnClicked(){
         setPageNumber(orgPageNumber - 1);
     }
-    const pages = [<SignUpOrgPageOne pageNumber={orgPageNumber} orgRightButton={orgRightButton} />, <SignUpOrgPageTwo orgLeftButton={orgLeftButton} />]
+    const pages = [<SignUpOrgPageOne pageNumber={orgPageNumber} orgRightButton={orgRightButton} formBehaviour={formBehaviour} />, <SignUpOrgPageTwo orgLeftButton={orgLeftButton} formBehaviour={formBehaviour} />]
     return(
         <>
         {pages[orgPageNumber - 1]}
