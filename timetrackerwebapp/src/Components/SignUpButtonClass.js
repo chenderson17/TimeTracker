@@ -11,7 +11,7 @@ export default function SignUpButtonClass({planName, planDescription, onClickMet
     }
     return(
         <div>
-        <button className={classes} value={val} onClick={onClickMethod}>
+        <button type="button" className={classes} value={val} onClick={onClickMethod}>
         {planName}
         </button>
         <details>
