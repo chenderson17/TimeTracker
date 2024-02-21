@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
+import './SignUpOrgPageTwo.css';
 export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
     const [numOfEmployees, setNumOfEmployees] = useState(1);
     const[planDetails, setPlanDetails] = useState("Free");
@@ -12,7 +13,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
     }
     return(
         <section className='signup-org-pagetwo-payment-section'>
-        <form action="/" className="" method="POST" onSubmit={formBehaviour}>
+        <form action="/" className="signup-org-pagetwo-form" method="POST" onSubmit={formBehaviour}>
         <div className="num-of-employees-container">
 
         <div className="num-of-employees-header-container">
@@ -21,6 +22,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
 
         <div className='num-of-employees-input-container'>
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
+        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} />
         </div>
 
 
@@ -44,7 +46,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
                         <label for='cvv'>CVV</label>
                         <input type='password' placeholder="***" maxLength={3}></input>
                         </div>
-                        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} />
+                        
                         
         </div>
 

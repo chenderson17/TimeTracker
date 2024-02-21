@@ -1,0 +1,46 @@
+.signup-org-pagetwo-form{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows:repeat(3,auto);
+}
+.num-of-employees-container{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-row-end:4;
+}
+.enter-card-details-container{
+    grid-column-start:2;
+}
+.billing-address-container{
+    grid-column-start:2;
+}
+.subtotal-section{
+    grid-column-start:2;
+}
+.billing-address-container-header{
+    font-size:1.3em;
+}
+.billing-address-container-header h4{
+}
+.billing-style-container{
+    display: grid;
+    grid-template-rows:auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap:1rem;
+}
+.billing-style-container div input{
+    display: block;
+}
+.billing-address-container-addressOne-addressTwo{
+    grid-row-start:1;
+    grid-row-end:4;
+    grid-column-start:1;
+    grid-column-end:3;
+}
+.billing-address-container-addressOne-addressTwo div{
+    margin:1rem 0;
+}
+.billing-address-container-addressOne-addressTwo input{
+    width:100%;
+    
+}
