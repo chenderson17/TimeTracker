@@ -64,11 +64,7 @@
 .signup-select-container select option{
    padding: 1rem;
 }
-.signup-form-employee, .org-page-one .signup-form-org{
-    border:1.2px solid rgb(121,121,121);
-    border-radius:5px;
-    
-}
+
 
 .signup-plan-container{
     text-align:center;
@@ -97,16 +93,6 @@
 }
 
 
-
-
-
-
-details  ul {
-    margin-left:1.5rem;
-}
-.org-page-two-num form{
-    margin:0 auto;
-}
 
 
 
@@ -197,9 +183,7 @@ details  ul {
     display: flex;
     justify-content: center;
 }
-.org-page-two-billing{
 
-}
 
 
 .org-page-two .create-an-account-button-container{

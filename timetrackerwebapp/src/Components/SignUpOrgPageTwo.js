@@ -6,7 +6,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
     const [numOfEmployees, setNumOfEmployees] = useState(1);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
-    const [currentPlan, setCurrentPlan] = useState("Free");
+    const [currentPlan, setCurrentPlan] = useState("");
     const tax = Math.round(priceDetails * 5.70) / 100;
     function getEmployeeNumber(event){
         setNumOfEmployees(event.target.value);
@@ -22,7 +22,9 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
 
         <div className='num-of-employees-input-container'>
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
+        </div>
         <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} />
+        
         </div>
 
 
@@ -95,8 +97,6 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
         </div>
 
 
-        </div>
-
         <div className='subtotal-section'>
             <div className='signup-subtotal-container'>
                 <div className='signup-plan-container'>
@@ -118,7 +118,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
             </div>
             </div>
             <div className='signup-org-pagetwo-submit-btn'>
-                <button type='submit'>Submit</button>
+                <button type='submit'>Create Account</button>
             </div>
         </form>
         {orgLeftButton()}

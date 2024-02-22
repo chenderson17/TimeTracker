@@ -1,21 +1,27 @@
 .signup-org-pagetwo-form{
     display:grid;
     grid-template-columns: repeat(2,auto);
-    grid-template-rows:repeat(3,auto);
+    grid-template-rows:repeat(4,auto);
 }
 .num-of-employees-container{
-    grid-row-start:1;
+    grid-row-start:2;
     grid-column-start:1;
-    grid-row-end:4;
+    grid-row-end:3;
+    background-color: thistle;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .enter-card-details-container{
     grid-column-start:2;
 }
 .billing-address-container{
     grid-column-start:2;
+    grid-row-start:2;
 }
 .subtotal-section{
     grid-column-start:2;
+    grid-row-start:3;
 }
 .billing-address-container-header{
     font-size:1.3em;
@@ -43,4 +49,11 @@
 .billing-address-container-addressOne-addressTwo input{
     width:100%;
     
+}
+.signup-org-pagetwo-submit-btn{
+    grid-row-start:4;
+    grid-column-start:1;
+    grid-column-end:3;
+    display: flex;
+    justify-content: center;
 }

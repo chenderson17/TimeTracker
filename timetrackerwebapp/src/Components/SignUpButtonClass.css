@@ -4,3 +4,6 @@
 .signupBtnCurrent{
     background-color: red;
 }
+.price-btn-container{
+    display: flex;
+}
