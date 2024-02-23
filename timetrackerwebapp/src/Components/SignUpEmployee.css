@@ -12,6 +12,7 @@
     border-radius: 5px;
     border:1px solid rgb(121,121,121);
     width:15rem;
+    margin:0.2rem 0;
 }
 .employee-signup-container input:focus, .org-signup-container input:focus{
     border:1px solid rgb(0,0,0);
