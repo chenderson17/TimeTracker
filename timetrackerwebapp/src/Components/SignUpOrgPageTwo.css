@@ -3,18 +3,45 @@
     grid-template-columns: repeat(2,auto);
     grid-template-rows:repeat(4,auto);
 }
-.num-of-employees-container{
+.signup-org-pagetwo-form input{
+    display: block;
+}
+.signup-org-pagetwo-form label{
+    font-weight:600;
+}
+.num-of-employees-section{
     grid-row-start:2;
     grid-column-start:1;
     grid-row-end:3;
-    background-color: thistle;
+    border:solid 1px rgb(121,121,121);
+    border-radius: 4px;
     display: flex;
     justify-content: center;
+    align-content: center;
     flex-direction: column;
+    padding:1rem;
+}
+.num-of-employees-section{
+   
 }
 .enter-card-details-container{
     grid-column-start:2;
+    grid-row-start:1;
+    border:solid 1px rgb(121,121,121);
+    border-radius: 4px;
+    padding:1rem;
+    display: grid;
+    grid-template-rows:repeat(3, auto);
+    grid-template-columns:repeat(2,auto);
+    gap:1rem;
 }
+.card-details-header-container{
+    grid-row-start:1;
+    grid-column-start:1;
+    grid-column-end:3;
+    text-align: center;
+}
+
 .billing-address-container{
     grid-column-start:2;
     grid-row-start:2;
@@ -23,37 +50,96 @@
     grid-column-start:2;
     grid-row-start:3;
 }
-.billing-address-container-header{
-    font-size:1.3em;
+.signup-plan-container{
+    text-align:center;
+    font-size: 1.1em;
 }
-.billing-address-container-header h4{
+.subtotal-section{
+    border:solid 1px rgb(121,121,121);
+    border-radius: 4px;
+    
 }
-.billing-style-container{
-    display: grid;
-    grid-template-rows:auto auto auto auto;
-    grid-template-columns: auto auto;
-    gap:1rem;
+
+.subtotal-section{
+
 }
-.billing-style-container div input{
-    display: block;
+.subtotal-container{
+    display: flex;
+    justify-content:space-between;
+    padding:0.7rem;
+    
 }
-.billing-address-container-addressOne-addressTwo{
+.signup-subtotal-tax-container{
+    border-bottom: dotted rgb(121,121,121) 1px;
+}
+.signup-total-container{
+    margin-top:0.5rem;
+}
+
+
+
+.billing-address-container{
+    border:solid 1px rgb(121,121,121);
+    border-radius: 4px;
+    display:grid;
+    grid-template-rows:repeat(5,auto);
+    grid-template-columns:repeat(2,auto);
+    gap:0.9rem;
+    padding:1.5rem;
+
+}
+
+.billing-header{
     grid-row-start:1;
-    grid-row-end:4;
+    grid-column-start:1;
+    grid-column-end:3;
+    text-align: center;
+}
+.billing-addresses{
+    grid-row-start:2;
     grid-column-start:1;
     grid-column-end:3;
 }
-.billing-address-container-addressOne-addressTwo div{
-    margin:1rem 0;
+.billing-addresses input{
+    width: 100%;
 }
-.billing-address-container-addressOne-addressTwo input{
-    width:100%;
-    
+.billing-state{
+    grid-row-start:3;
+    grid-column-start:2;
 }
+.billing-country{
+    grid-row-start:3;
+    grid-column-start:1;
+}
+.billing-city{
+    grid-row-start:4;
+    grid-column-start:1;
+}
+.billing-zip{
+    grid-row-start:4;
+    grid-column-start:2;
+}
+
+
 .signup-org-pagetwo-submit-btn{
     grid-row-start:4;
     grid-column-start:1;
     grid-column-end:3;
     display: flex;
     justify-content: center;
+}
+.signup-org-pagetwo-form > *{
+   
+    border:1px solid rgb(255,0,0);
+}
+
+.signup-org-pagetwo-form > * div{
+    
+}
+.signup-org-pagetwo-form > * input{
+    padding:0.4rem;
+    width: 100%;
+    font-weight: 600;
+    border-radius: 4px;
+    border:1px solid rgb(100,100,100);
 }

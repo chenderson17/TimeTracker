@@ -14,9 +14,10 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
     return(
         <section className='signup-org-pagetwo-payment-section'>
         <form action="/" className="signup-org-pagetwo-form" method="POST" onSubmit={formBehaviour}>
-        <div className="num-of-employees-container">
 
-        <div className="num-of-employees-header-container">
+        <div className="num-of-employees-section">
+    <div className='num-of-employees-container'>
+      <div className="num-of-employees-header-container">
             <h3>Number of Employees</h3>
         </div>
 
@@ -24,7 +25,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
         </div>
         <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} />
-        
+        </div>
         </div>
 
 
@@ -56,44 +57,55 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
 
 
         <div className='billing-address-container'>
-                        <div className="billing-address-container-header">
-                         
-                        <h4>Billing</h4>
-                        </div>
-                        <div className='billing-style-container'>
-                            <div className='billing-address-container-addressOne-addressTwo'>
-                            <div>
+                         <div className='billing-header'>
+                        <h3>Billing</h3>
+                        </div>   
+
+
+
+                        <div className='billing-addresses'>
                             <label>Address Line 1 </label>
-                        <input type='text' placeholder='Address Line 1' required={true}></input>
-                        </div>
-                        <div>
+                            <input type='text' placeholder='Address Line 1' required={true}></input>
+                      
+
+
+                      
                         <label>Address Line 2</label>
                         <input type='text' placeholder='Address Line 2 (Optional)'></input>
-                        </div>
-                        </div>
+                       </div>
+
+
+                       <div className='billing-zip'>
+
                         
-                        <div>
                         <label>Zip Code</label>
                         <input type='text' placeholder='Zip Code' required={true}></input>
-                        </div>
-                        <div>
+                        
+                    </div>
+                    
+
+                    <div className='billing-city'>
+                        
                         <label>City</label>
                         <input type='text' placeholder='City' required={true}></input>
-                        </div>
-                        <div>
+                    </div>
+
+                      <div className='billing-state'>
                         <label>State</label>
                         <input list='state-providence-region-list' name='select-country-list' placeholder='State/Providence/Region' />
-                        </div>
+                        <datalist id='state-list'>
+                            <option value="">--State--</option>
+                        </datalist>
+                     </div>
 
 
-                        <div>
-                            <label>Country</label>
+                    <div className='billing-country'>
+                        <label>Country</label>
                         <input list='country-list' name='select-country-list' placeholder='Country' required={true}/>
                         <datalist id='country-list'>
                             <option value="">--Country--</option>
                         </datalist>
-                        </div>
-                        </div>
+                    </div>
         </div>
 
 
@@ -117,6 +129,8 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
             </div>
             </div>
             </div>
+
+
             <div className='signup-org-pagetwo-submit-btn'>
                 <button type='submit'>Create Account</button>
             </div>
