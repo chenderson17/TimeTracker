@@ -2,9 +2,9 @@ import React from "react";
 import SignUpButtonClass from './SignUpButtonClass.js';
 import { useState } from "react";
 import './SignUpButtonClass.css';
-export default function SignUpOrgPageTwoPriceButtons({setCurrentPlan, currentPlan, employeeAmount, showButtons}){
+export default function SignUpOrgPageTwoPriceButtons({setCurrentPlan, currentPlan, employeeAmount, showButtons, planArray}){
 function printValue(event){
-    setCurrentPlan(event.target.value);
+    setCurrentPlan(planArray[Number(event.target.value)]);
 }
 const freeBtnDetails = ["Basic Time Tracking", "Single User Access", "Basic Reporting"];
 const basicBtnDetails = ["$10.00/month", "Enhanced Time Tracking", "Multi-User Access", "Export Data", "Basic Analytics Dashboard"]
@@ -12,23 +12,23 @@ const extraBtnDetails = ["$25.00/month", "Advanced Time Tracking", "Project Budg
 const premiumBtnDetails =["$50.00/month", "Unlimited Users", "Advanced Analytics Dashboard", "Resource Planning", "Priority Customer Support"]
 const freeBtn = ()=>{
     return(
-        <SignUpButtonClass planName={"Free"} planDescription={freeBtnDetails} val={"Free"}  onClickMethod={printValue} classes={currentPlan == "Free"  ? "signupBtnCurrent" : "signupBtnDefault"} />
+        <SignUpButtonClass planName={"Free"} planDescription={freeBtnDetails} val={"0"}  onClickMethod={printValue} classes={currentPlan ==  planArray[0].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 const basicBtn = () =>{
     return(
-    <SignUpButtonClass planName={"Basic"} planDescription={basicBtnDetails} val={"Basic"}  onClickMethod={printValue} classes={currentPlan == "Basic"  ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Basic"} planDescription={basicBtnDetails} val={"1"}  onClickMethod={printValue} classes={currentPlan == planArray[1].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 const extraBtn = () =>{
     return(
-    <SignUpButtonClass planName={"Extra"} planDescription={extraBtnDetails} val={"Extra"}  onClickMethod={printValue} classes={currentPlan == "Extra"  ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Extra"} planDescription={extraBtnDetails} val={"2"}  onClickMethod={printValue} classes={currentPlan == planArray[2].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 
 const premiumBtn = () =>{
     return (
-    <SignUpButtonClass planName={"Premium"} planDescription={premiumBtnDetails} val={"Premium"}  onClickMethod={printValue} classes={currentPlan == "Premium"  ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Premium"} planDescription={premiumBtnDetails} val={"3"}  onClickMethod={printValue} classes={currentPlan == planArray[3].planName ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 
@@ -69,7 +69,6 @@ const displayPricePlans = (num) =>{
         </div>
         )
     }
-
 }
 
 

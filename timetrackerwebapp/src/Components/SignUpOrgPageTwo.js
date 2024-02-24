@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 import './SignUpOrgPageTwo.css';
-export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
+export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArray}){
     const [numOfEmployees, setNumOfEmployees] = useState(0);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
     const [currentPlan, setCurrentPlan] = useState("");
-    const tax = Math.round(priceDetails * 5.70) / 100;
+    const [tax,setTax] = useState(Math.round(0 * 5.70) / 100);
     const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
         setNumOfEmployees(event.target.value);
@@ -27,7 +27,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
         <div className='num-of-employees-input-container'>
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
         </div>
-        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} showButtons={displayButtons}/>
+        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} showButtons={displayButtons} planArray={planArray}/>
         </div>
         </div>
 
@@ -127,11 +127,11 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
         <div className='subtotal-section'>
             <div className='signup-subtotal-container'>
                 <div className='signup-plan-container'>
-                <h3>{currentPlan}</h3>
+                <h3>{currentPlan.planName}</h3>
             </div>
             <div className='signup-subtotal-cost-container subtotal-container'>
             <h4>Subtotal</h4>
-            <little>${priceDetails}</little>
+            <little>${currentPlan.price}</little>
             </div>
             <div className='signup-subtotal-tax-container subtotal-container'>
             <h4>Tax</h4>
@@ -140,7 +140,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
 
             <div className='signup-total-container subtotal-container'>
                 <h4>Total</h4>
-                <little>${priceDetails + tax}</little>
+                <little>${currentPlan.price + tax}</little>
             </div>
             </div>
             </div>

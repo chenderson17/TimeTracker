@@ -10,6 +10,25 @@ export default function SignUp(){
     const [orgPageNumber, setPageNumber] = useState(1);
     const[priceDetails, setPriceDetails] = useState(0.00);
     const[planDetails, setPlanDetails] = useState("Free");
+    
+    const freePlan ={
+        planName:"Free",
+        price:0.00
+    }
+    const basicPlan ={
+        planName:"Basic",
+        price:10.00
+    }
+    const extraPlan ={
+        planName:"Extra",
+        price:25.00
+    }
+    const premiumPlan ={
+        planName:"Premium",
+        price:50.00
+    }
+    const planArray = [freePlan, basicPlan, extraPlan, premiumPlan];
+
     const signupType = ()=>{
         return(
             <div className= {orgPageNumber > 1 ? 'display-none' : 'signup-type-container'}>
@@ -71,7 +90,7 @@ export default function SignUp(){
         if(signUpType === "org"){
         return(
             <>
-             <SignUpOrg pageNumber={orgPageNumber} orgRightButton={orgRightButton} orgLeftButton={orgLeftButton} formBehaviour={handleSubmit} />
+             <SignUpOrg pageNumber={orgPageNumber} orgRightButton={orgRightButton} orgLeftButton={orgLeftButton} formBehaviour={handleSubmit} planArray={planArray} />
             
             </>
         )
