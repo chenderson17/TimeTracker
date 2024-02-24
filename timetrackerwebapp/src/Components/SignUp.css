@@ -9,9 +9,7 @@
     justify-content: space-evenly;
     align-content: center;
     padding:2rem;
-    margin-top:1rem;
-
-    
+    margin-top:1rem; 
 }
 .signup-header{
     display: flex;
@@ -78,7 +76,6 @@
     border:none;
     outline:none;
 }
-
 
 
 

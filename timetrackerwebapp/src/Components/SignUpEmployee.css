@@ -45,10 +45,8 @@
 }
 .employee-create-an-account-button-container button{
     font-weight: 500;
-    width: 18rem;
-    padding:0.5rem;
-    border:none;
-    border-radius: 2px;
+    width: 100%;
+    padding:1rem;
 }
 .orgrightbutton-page-one{
     display: flex;

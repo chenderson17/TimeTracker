@@ -2,7 +2,7 @@ import React from "react";
 import SignUpButtonClass from './SignUpButtonClass.js';
 import { useState } from "react";
 import './SignUpButtonClass.css';
-export default function SignUpOrgPageTwoPriceButtons({setCurrentPlan, currentPlan, employeeAmount}){
+export default function SignUpOrgPageTwoPriceButtons({setCurrentPlan, currentPlan, employeeAmount, showButtons}){
 function printValue(event){
     setCurrentPlan(event.target.value);
 }
@@ -35,7 +35,7 @@ const premiumBtn = () =>{
 const displayPricePlans = (num) =>{
     if(num <= 10) {
         return (
-            <div className='price-btn-container'>
+            <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
                 {freeBtn()}
                 {basicBtn()}
                 {extraBtn()}
@@ -46,7 +46,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 10 && num <= 100){
         return(
-            <div className='price-btn-container'>
+            <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
                 {basicBtn()}
                 {extraBtn()}
                 {premiumBtn()}
@@ -56,7 +56,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 100 && num <= 500){
         return(
-        <div className='price-btn-container'>
+        <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
                 {extraBtn()}
                 {premiumBtn()}
         </div>
@@ -64,7 +64,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 500){
         return(
-        <div className='price-btn-container'>
+        <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
                 {premiumBtn()}
         </div>
         )

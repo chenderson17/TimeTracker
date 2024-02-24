@@ -3,14 +3,17 @@ import { useState } from "react";
 import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 import './SignUpOrgPageTwo.css';
 export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
-    const [numOfEmployees, setNumOfEmployees] = useState(1);
+    const [numOfEmployees, setNumOfEmployees] = useState(0);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
     const [currentPlan, setCurrentPlan] = useState("");
     const tax = Math.round(priceDetails * 5.70) / 100;
+    const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
         setNumOfEmployees(event.target.value);
+        setDisplay(true);
     }
+    console.log(numOfEmployees)
     return(
         <section className='signup-org-pagetwo-payment-section'>
         <form action="/" className="signup-org-pagetwo-form" method="POST" onSubmit={formBehaviour}>
@@ -24,7 +27,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
         <div className='num-of-employees-input-container'>
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
         </div>
-        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} />
+        <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} showButtons={displayButtons}/>
         </div>
         </div>
 
@@ -33,7 +36,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
                        <div className='card-details-header-container'>
                         <h3>Enter Card Details</h3>
                         </div>
-
+                        <div className="signup-card-number-expr">
                         <div className='card-number-container'>
                         <label for='card-number'>Card Number</label>
                         <input type="text" placeholder='Card Number' maxLength={16}></input>
@@ -43,7 +46,18 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
                         <div className='card-detail-expr-container'>
                         <label for='expiration-date'>Expiration Date</label>
                         <input type="date"></input>
+
+
                         </div>
+
+                      
+
+
+
+                        </div>
+
+
+                        
 
                         <div className='cvv-style-container'>
                         <label for='cvv'>CVV</label>
@@ -52,6 +66,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
                         
                         
         </div>
+       
 
 
 
@@ -132,10 +147,12 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour}){
 
 
             <div className='signup-org-pagetwo-submit-btn'>
-                <button type='submit'>Create Account</button>
+                <button type='submit' className=''>Create Account</button>
             </div>
         </form>
+        <div className='org-left-button-container'>
         {orgLeftButton()}
+        </div>
         </section>
 
 

@@ -30,6 +30,29 @@ export default function SignUp(){
         )
     }
 
+    let orgRightButton = ()=>{
+        return(
+            <button className='org-right-button' onClick={rightBtnClicked}>
+                      <box-icon name='right-arrow-circle' size='60px' color='rgb(50,50,50)'></box-icon>
+            </button>
+
+        )
+    }
+    function rightBtnClicked(){
+        setPageNumber(orgPageNumber + 1);
+          
+      }
+      let orgLeftButton = () =>{
+        return(
+            <button className='org-left-button' onClick={leftBtnClicked}>
+                <box-icon name='left-arrow-circle' size='60px' color='rgb(50,50,50)'></box-icon>
+            </button>
+        )
+    }
+    function leftBtnClicked(){
+        setPageNumber(orgPageNumber - 1);
+    }
+
     
  
     const handleSubmit = (event) => {
@@ -48,7 +71,7 @@ export default function SignUp(){
         if(signUpType === "org"){
         return(
             <>
-             <SignUpOrg formBehaviour={handleSubmit} />
+             <SignUpOrg pageNumber={orgPageNumber} orgRightButton={orgRightButton} orgLeftButton={orgLeftButton} formBehaviour={handleSubmit} />
             
             </>
         )
