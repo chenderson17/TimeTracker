@@ -11,7 +11,7 @@ details ul{
     display: block;
 }
 .signup-org-pagetwo-form label{
-    font-weight:600;
+    font-weight:500;
 }
 .num-of-employees-section{
     grid-row-start:1;
