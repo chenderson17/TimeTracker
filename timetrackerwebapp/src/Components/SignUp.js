@@ -27,7 +27,11 @@ export default function SignUp(){
         planName:"Premium",
         price:50.00
     }
-    const planArray = [freePlan, basicPlan, extraPlan, premiumPlan];
+    const noPlanSelected ={
+        planName:" ",
+        price:0
+    }
+    const planArray = [freePlan, basicPlan, extraPlan, premiumPlan, noPlanSelected];
 
     const signupType = ()=>{
         return(

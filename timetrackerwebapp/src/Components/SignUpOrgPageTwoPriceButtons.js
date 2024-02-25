@@ -35,7 +35,7 @@ const premiumBtn = () =>{
 const displayPricePlans = (num) =>{
     if(num <= 10) {
         return (
-            <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
+            <div className={employeeAmount != null ? "price-btn-container" : "display-none"}>
                 {freeBtn()}
                 {basicBtn()}
                 {extraBtn()}
@@ -46,7 +46,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 10 && num <= 100){
         return(
-            <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
+            <div className={employeeAmount != null ? "price-btn-container" :"display-none"}>
                 {basicBtn()}
                 {extraBtn()}
                 {premiumBtn()}
@@ -56,7 +56,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 100 && num <= 500){
         return(
-        <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
+        <div className={employeeAmount != null ? "price-btn-container" :"display-none"}>
                 {extraBtn()}
                 {premiumBtn()}
         </div>
@@ -64,7 +64,7 @@ const displayPricePlans = (num) =>{
     }
     else if(num > 500){
         return(
-        <div className={employeeAmount != 0 ? "price-btn-container" :"display-none"}>
+        <div className={employeeAmount != null ? "price-btn-container" :"display-none"}>
                 {premiumBtn()}
         </div>
         )

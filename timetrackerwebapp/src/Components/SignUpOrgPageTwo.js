@@ -3,17 +3,22 @@ import { useState } from "react";
 import SignUpOrgPageTwoPriceButtons from './SignUpOrgPageTwoPriceButtons.js';
 import './SignUpOrgPageTwo.css';
 export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArray}){
-    const [numOfEmployees, setNumOfEmployees] = useState(0);
+    const [numOfEmployees, setNumOfEmployees] = useState(null);
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
-    const [currentPlan, setCurrentPlan] = useState("");
+    const [currentPlan, setCurrentPlan] = useState(planArray[4]);
     const [tax,setTax] = useState(Math.round(0 * 5.70) / 100);
     const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
-        setNumOfEmployees(event.target.value);
-        setDisplay(true);
+        if(event.target.value.length != 0){
+            setNumOfEmployees(event.target.value);
+          
+        }
+        else{
+            setNumOfEmployees(null)
+            setCurrentPlan(planArray[4]);
+        }
     }
-    console.log(numOfEmployees)
     return(
         <section className='signup-org-pagetwo-payment-section'>
         <form action="/" className="signup-org-pagetwo-form" method="POST" onSubmit={formBehaviour}>
