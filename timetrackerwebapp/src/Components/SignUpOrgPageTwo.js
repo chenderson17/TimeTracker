@@ -5,7 +5,6 @@ import './SignUpOrgPageTwo.css';
 export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArray}){
     const [numOfEmployees, setNumOfEmployees] = useState(null);
     const[planDetails, setPlanDetails] = useState("Free");
-    const[priceDetails, setPriceDetails] = useState(0.00);
     const [currentPlan, setCurrentPlan] = useState(planArray[4]);
     const tax = (Math.round(currentPlan.price * 5.7) / 100);
     const[displayButtons, setDisplay] = useState(false);
@@ -34,6 +33,14 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
         <input type="text" inputmode="numeric"name="numOfEmployeesSignup" placeholder='Number of Employees' onKeyUp={getEmployeeNumber}></input>
         </div>
         <SignUpOrgPageTwoPriceButtons setCurrentPlan={setCurrentPlan} currentPlan={currentPlan} employeeAmount={numOfEmployees} showButtons={displayButtons} planArray={planArray}/>
+        </div>
+        <div className='radio-btns'>
+            <fieldset>
+            <label>Monthly</label>
+            <input id='monthly-yearly' name='monthlyyearly' type='radio'></input>
+            <label>Yearly</label>
+            <input id='monthly-yearly' name='monthlyyearly' type='radio'></input>
+            </fieldset>
         </div>
         </div>
 
