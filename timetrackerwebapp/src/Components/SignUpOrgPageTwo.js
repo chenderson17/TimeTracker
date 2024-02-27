@@ -7,9 +7,10 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
     const[planDetails, setPlanDetails] = useState("Free");
     const[priceDetails, setPriceDetails] = useState(0.00);
     const [currentPlan, setCurrentPlan] = useState(planArray[4]);
-    const [tax,setTax] = useState(Math.round(0 * 5.70) / 100);
+    const tax = (Math.round(currentPlan.price * 5.7) / 100);
     const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
+        setCurrentPlan(planArray[4]);
         if(event.target.value.length != 0){
             setNumOfEmployees(event.target.value);
           

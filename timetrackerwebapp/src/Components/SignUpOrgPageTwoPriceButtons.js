@@ -12,23 +12,23 @@ const extraBtnDetails = ["$25.00/month", "Advanced Time Tracking", "Project Budg
 const premiumBtnDetails =["$50.00/month", "Unlimited Users", "Advanced Analytics Dashboard", "Resource Planning", "Priority Customer Support"]
 const freeBtn = ()=>{
     return(
-        <SignUpButtonClass planName={"Free"} planDescription={freeBtnDetails} val={"0"}  onClickMethod={printValue} classes={currentPlan ==  planArray[0].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
+        <SignUpButtonClass planName={"Free"} planDescription={freeBtnDetails} val={"0"}  onClickMethod={printValue} classes={currentPlan.planName ==  planArray[0].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 const basicBtn = () =>{
     return(
-    <SignUpButtonClass planName={"Basic"} planDescription={basicBtnDetails} val={"1"}  onClickMethod={printValue} classes={currentPlan == planArray[1].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Basic"} planDescription={basicBtnDetails} val={"1"}  onClickMethod={printValue} classes={currentPlan.planName == planArray[1].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 const extraBtn = () =>{
     return(
-    <SignUpButtonClass planName={"Extra"} planDescription={extraBtnDetails} val={"2"}  onClickMethod={printValue} classes={currentPlan == planArray[2].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Extra"} planDescription={extraBtnDetails} val={"2"}  onClickMethod={printValue} classes={currentPlan.planName == planArray[2].planName  ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 
 const premiumBtn = () =>{
     return (
-    <SignUpButtonClass planName={"Premium"} planDescription={premiumBtnDetails} val={"3"}  onClickMethod={printValue} classes={currentPlan == planArray[3].planName ? "signupBtnCurrent" : "signupBtnDefault"} />
+    <SignUpButtonClass planName={"Premium"} planDescription={premiumBtnDetails} val={"3"}  onClickMethod={printValue} classes={currentPlan.planName == planArray[3].planName ? "signupBtnCurrent" : "signupBtnDefault"} />
     )
 }
 
