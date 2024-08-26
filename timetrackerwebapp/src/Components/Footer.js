@@ -19,7 +19,7 @@ export default function Footer(){
     
   </div>
   <div className="footer-socials">
-    <div>
+    <div className="footer-socials-container">
     <h3>Follow Us</h3>
     </div>
     <div>

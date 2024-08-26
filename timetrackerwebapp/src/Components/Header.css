@@ -52,7 +52,7 @@ header a {
 
 }
 .header-btns:hover{
- background-color:rgba(255, 85, 0, 0.671);
+ background-color:rgb(245, 121, 59);
  color: rgb(255,255,255);
  font-size: 800;
 }

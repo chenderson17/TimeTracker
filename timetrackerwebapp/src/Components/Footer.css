@@ -20,6 +20,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .footer-contact-subheader{
  font-weight: 600;
 }
@@ -46,10 +47,9 @@
  grid-column-start: 3;
  grid-row-start: 1;
  display: flex;
- justify-content: start;
+ justify-content: center;
  align-items: center;
  flex-direction: column;
-  
 }
 .copyright{
  grid-column-start: 2;
