@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './SignUp.css';
 import SignUpEmployee from './SignUpEmployee.js';
 import SignUpOrg from './SignUpOrg.js';
-
+import Footer from './Footer.js';
 export default function SignUp(){
     const[signUpType, setSignUpType] = useState("org");
     const [numOfEmployees, setNumOfEmployees] = useState(0);
@@ -116,6 +116,7 @@ export default function SignUp(){
         </div>
 
         </section>
+        <Footer />
         </>
     )
 }
