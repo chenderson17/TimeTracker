@@ -37,6 +37,10 @@
 .nav-summary ul li a{
  text-decoration: none;
 }
+.nav-summary ul li a:hover{
+  font-weight: bold;
+  transition: ease-in 5s linear;
+}
 .footer-socials{
 
 }
