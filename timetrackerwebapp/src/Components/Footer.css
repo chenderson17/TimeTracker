@@ -29,18 +29,19 @@
  
 }
 .nav-summary ul{
- list-style:circle;
+ list-style-type: none;
+}
+.nav-summary li{
+  margin:10% 0;
 }
 .nav-summary ul li a{
- text-decoration: underline;
+ text-decoration: none;
 }
 .footer-socials{
 
 }
 .copyright{
- grid-column-start: 2;
- grid-row-start: 2;
- display: flex;
+   display: flex;
   flex-direction: column;
   justify-content:flex-end;
   align-items: center;
