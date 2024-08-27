@@ -7,8 +7,8 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
     const[planDetails, setPlanDetails] = useState("Free");
     const [currentPlan, setCurrentPlan] = useState(planArray[4]);
     const tax = (Math.round(currentPlan.price * 5.7) / 100);
-    let isMonthlyMultiplayer = false;
-    let multiplier = isMonthlyMultiplayer ? 1 : 12;
+    let [isMonthly,setIsMonthly] = useState(true);
+    let [multiplier, setMultiplier] = useState(isMonthly ? 1 : 12);
     const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
         setCurrentPlan(planArray[4]);
@@ -21,16 +21,20 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
             setCurrentPlan(planArray[4]);
         }
     }
-    function monthly(){
-       isMonthlyMultiplayer = true;
-       multiplier = isMonthlyMultiplayer ? 1 : 12;
-       return multiplier;
-        
-    }
-    function isNotMonthly(){
-        isMonthlyMultiplayer = false;
-        multiplier = isMonthlyMultiplayer ? 1 : 12;
-        return multiplier;
+    function handleMonthly(event){
+        let val = event.target.value;
+        console.log(val);
+        if(val === 'monthly'){
+        setIsMonthly(true);
+        setMultiplier(1);
+        console.log(isMonthly);
+        }
+        else{
+            setIsMonthly(false);
+            setMultiplier(12);
+            console.log(isMonthly);
+            
+        }
     }
     return(
         <section className='signup-org-pagetwo-payment-section'>
@@ -50,9 +54,9 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
         <div className='radio-btns'>
             <fieldset>
             <label>Monthly</label>
-            <input id='monthly-yearly' name='monthlyyearly' type='radio' onFocus={monthly}></input>
+            <input id='monthly-yearly' value={'monthly'} name='monthlyyearly' type='radio' onFocus={handleMonthly}></input>
             <label>Yearly</label>
-            <input id='monthly-yearly' name='monthlyyearly' type='radio' onFocus={isNotMonthly}></input>
+            <input id='monthly-yearly' value={'yearly'} name='monthlyyearly' type='radio' onFocus={handleMonthly}></input>
             </fieldset>
         </div>
         </div>
@@ -166,7 +170,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
 
             <div className='signup-total-container subtotal-container'>
                 <h4>Total</h4>
-                <little>${currentPlan.price + tax}</little>
+                <little>${(currentPlan.price * multiplier) + tax}</little>
             </div>
             </div>
             </div>

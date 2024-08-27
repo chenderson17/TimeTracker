@@ -5,6 +5,7 @@
  margin:0 2rem;
  background-color: rgba(143, 143, 143, 0.027);
  border:1px solid rgba(0, 0, 0, 0.097);
+ min-width: 100%;
 }
 .cards-header{
  text-align: center;
