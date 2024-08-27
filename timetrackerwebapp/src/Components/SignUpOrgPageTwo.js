@@ -7,6 +7,8 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
     const[planDetails, setPlanDetails] = useState("Free");
     const [currentPlan, setCurrentPlan] = useState(planArray[4]);
     const tax = (Math.round(currentPlan.price * 5.7) / 100);
+    let isMonthlyMultiplayer = false;
+    let multiplier = isMonthlyMultiplayer ? 1 : 12;
     const[displayButtons, setDisplay] = useState(false);
     function getEmployeeNumber(event){
         setCurrentPlan(planArray[4]);
@@ -18,6 +20,17 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
             setNumOfEmployees(null)
             setCurrentPlan(planArray[4]);
         }
+    }
+    function monthly(){
+       isMonthlyMultiplayer = true;
+       multiplier = isMonthlyMultiplayer ? 1 : 12;
+       return multiplier;
+        
+    }
+    function isNotMonthly(){
+        isMonthlyMultiplayer = false;
+        multiplier = isMonthlyMultiplayer ? 1 : 12;
+        return multiplier;
     }
     return(
         <section className='signup-org-pagetwo-payment-section'>
@@ -37,9 +50,9 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
         <div className='radio-btns'>
             <fieldset>
             <label>Monthly</label>
-            <input id='monthly-yearly' name='monthlyyearly' type='radio'></input>
+            <input id='monthly-yearly' name='monthlyyearly' type='radio' onFocus={monthly}></input>
             <label>Yearly</label>
-            <input id='monthly-yearly' name='monthlyyearly' type='radio'></input>
+            <input id='monthly-yearly' name='monthlyyearly' type='radio' onFocus={isNotMonthly}></input>
             </fieldset>
         </div>
         </div>
@@ -144,7 +157,7 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
             </div>
             <div className='signup-subtotal-cost-container subtotal-container'>
             <h4>Subtotal</h4>
-            <little>${currentPlan.price}</little>
+            <little>${currentPlan.price * multiplier}</little>
             </div>
             <div className='signup-subtotal-tax-container subtotal-container'>
             <h4>Tax</h4>
