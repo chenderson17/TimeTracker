@@ -4,6 +4,7 @@ import './Footer.css'
 export default function Footer(){
   return(
  <section className="footer">
+  <div className='footer-top'>
   <div class="footer-contact">
     <div>
    <h3>Get In Touch</h3>
@@ -14,21 +15,6 @@ export default function Footer(){
     <a href="tel:+">(555)-555-5555</a>
     <p className="footer-contact-subheader">Email</p>
     <a href='/'>info@timetracker.com</a>
-    </div>
-
-    
-  </div>
-  <div className="footer-socials">
-    <div className="footer-socials-container">
-    <h3>Follow Us</h3>
-    </div>
-    <div>
-      <a href="/">
-    <box-icon type='logo' name='facebook' color="white" size="md"></box-icon>
-    </a>
-    <a href="/">
-    <box-icon name='instagram' type='logo' color="white" size="md" ></box-icon>
-    </a>
     </div>
   </div>
 
@@ -51,11 +37,30 @@ export default function Footer(){
     </ul>
     </div>
   </div>
+
+
+  <div className="footer-socials">
+    <div className="footer-socials-container">
+    <h3>Follow Us</h3>
+    </div>
+    <div>
+      <a href="/">
+    <box-icon type='logo' name='facebook' color="white" size="md"></box-icon>
+    </a>
+    <a href="/">
+    <box-icon name='instagram' type='logo' color="white" size="md" ></box-icon>
+    </a>
+    </div>
+  </div>
+
+  </div>
+  <div className="footer-bottom">
   <div className="privacy-policy">
     
   </div>
   <div className="copyright">
    <p>&#169; Copyright TimeTracker 2024 | <a href="/">Privacy Policy</a></p>
+  </div>
   </div>
  </section>
   )
