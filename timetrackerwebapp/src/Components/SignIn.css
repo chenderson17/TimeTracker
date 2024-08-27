@@ -3,8 +3,9 @@
     padding:5rem;
     overflow: hidden;
     margin-bottom:4rem;
-     background-image:url('../images/open_source_state.jpg'); 
+    background-image:url('../images/open_source_state.jpg'); 
     background-position: center;
+    background-repeat: no-repeat;
     margin-top:1rem;
 }
 .sign-in-main-c{
