@@ -25,10 +25,21 @@ details ul{
     flex-direction: column;
     padding: 1rem;
 }
+.num-of-employees-section input[type="text"]{
+    width: 30%;
+}
+.num-of-employees-section fieldset{
+    border:none;
+}
+.num-of-employees-section input{
+    display: inline;
+}
 .num-of-employees-section{
    
 }
-.num-of-employees-section input{
+.num-of-employees-section label{
+    margin-right:2%;
+    margin-left:0.5%;
    
 }
 .enter-card-details-container{

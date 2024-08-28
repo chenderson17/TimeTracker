@@ -53,10 +53,10 @@ export default function SignUpOrgPageTwo({orgLeftButton, formBehaviour, planArra
         </div>
         <div className='radio-btns'>
             <fieldset>
-            <label>Monthly</label>
             <input id='monthly-yearly' value={'monthly'} name='monthlyyearly' type='radio' onFocus={handleMonthly} checked={isMonthly}></input>
-            <label>Yearly</label>
+            <label>Monthly</label>
             <input id='monthly-yearly' value={'yearly'} name='monthlyyearly' type='radio' onFocus={handleMonthly}></input>
+            <label>Yearly</label>
             </fieldset>
         </div>
         </div>
