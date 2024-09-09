@@ -26,13 +26,13 @@ export default function Contact(){
     <div className="fname-container">
      <div className="contact-input-content">
     <label name='fname'>First Name</label>
-    <input type='text' name='fname' placeholder="First Name"/>
+    <input type='text' name='fname' placeholder="First Name" required={true}/>
     </div>
     </div>
 
     <div className="lname-container">
     <label name='lname'>Last Name</label>
-    <input type='text' name='lname' placeholder="Last Name"/>
+    <input type='text' name='lname' placeholder="Last Name" required={true}/>
     </div>
     </div>
     
@@ -41,7 +41,7 @@ export default function Contact(){
 
     <div className="email-container">
     <label name="contact-email">Email</label>
-    <input type="email" name="contact-email" placeholder="Email" />
+    <input type="email" name="contact-email" placeholder="Email" required={true}/>
     </div>
 
     <div className="phone-container">
@@ -52,7 +52,7 @@ export default function Contact(){
 
     <div className="contact-message-container">
     <label name="contact-message">Message</label>
-    <textarea name="contact-message" cols="30" rows="7" maxLength={250} placeholder='Leave your message here...'></textarea>
+    <textarea name="contact-message" cols="30" rows="7" maxLength={250} placeholder='Leave your message here...' required={true}></textarea>
     </div>
     <div className="send-btn-container">
      <button className="send-btn" onMouseOver={handleHover}onMouseLeave={handleLeave}><span className="send-btn-text">Send</span><box-icon name='send' color="white" size="sm" animation={animate}  ></box-icon></button>
