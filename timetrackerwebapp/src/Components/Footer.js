@@ -42,7 +42,6 @@ export default function Footer(){
   <div className="footer-socials">
     <div className="footer-socials-container">
     <h3>Follow Us</h3>
-    </div>
     <div>
       <a href="/">
     <box-icon type='logo' name='facebook' color="white" size="md"></box-icon>
@@ -50,6 +49,7 @@ export default function Footer(){
     <a href="/">
     <box-icon name='instagram' type='logo' color="white" size="md" ></box-icon>
     </a>
+    </div>
     </div>
   </div>
 
@@ -59,7 +59,7 @@ export default function Footer(){
     
   </div>
   <div className="copyright">
-   <p>&#169; Copyright TimeTracker 2024 | <a href="/">Privacy Policy</a></p>
+   <p>&#169; Copyright TimeTracker 2024 | <a href="/">Privacy Policy</a> | <a href="/">Terms of Service</a></p>
   </div>
   </div>
  </section>

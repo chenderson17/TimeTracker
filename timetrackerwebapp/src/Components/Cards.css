@@ -16,8 +16,9 @@
 }
 .cards-container{
  display: flex;
- flex-wrap: wrap;
+ flex-wrap: nowrap;
  justify-content: center;
+ overflow:hidden;
  gap:2.5rem;
  padding: 2rem;
  color:rgb(50,50,50);

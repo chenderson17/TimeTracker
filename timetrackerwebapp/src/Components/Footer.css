@@ -42,8 +42,9 @@
   transition: ease-in 5s linear;
 }
 .footer-socials{
-
+  
 }
+
 .copyright{
    display: flex;
   flex-direction: row;
