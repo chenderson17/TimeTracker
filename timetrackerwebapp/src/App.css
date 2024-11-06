@@ -2,6 +2,9 @@
 .App {
   text-align: center;
 }
+input[type="text"]:invalid:focus, input[type="email"]:invalid:focus {
+  border: 1px rgb(156, 2, 2) solid;
+}
 
 .App-logo {
   height: 40vmin;
