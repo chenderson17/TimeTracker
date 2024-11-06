@@ -50,6 +50,8 @@ header a {
  font-size: 0.9em;
  transition: 100ms ease-in;
  font-family: 'Poppins', sans-serif;
+ font-weight: 400;
+ text-transform: uppercase;
 
 }
 .header-btns:hover{
@@ -57,3 +59,61 @@ header a {
  color: rgb(255,255,255);
  font-size: 800;
 }
+
+.login-container {
+  background-color: blue;
+  display: block;
+  margin-left:100%;
+  z-index:100;
+}
+.login-container input{
+  display: block;
+}
+.login-wrapper{
+  display: inline;
+}
+.signup-wrapper{
+  display: inline;
+}
+.login-form {
+  display: none;
+  position: absolute;
+  background: #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 darken(#ddd, 5%);
+  input {
+    background: #f1f1f1;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 2px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  input[type="submit"] {
+    color: #ffF;
+    background: #1BBC9B;
+    font-style: normal;
+    box-shadow: 0 4px 0 darken(#1BBC9B, 5%);
+  }
+}
+
+@include keyframes(slide) {
+  0% {
+    opacity: 0;
+    @include transform(translateY(20px));
+  }
+  100% {
+    opacity: 1;
+    @include transform(translateY(0));
+  }
+}
+
+.open {
+  @include animation(slide 1s);
+  display: block;
+ 
+}
+
+
+

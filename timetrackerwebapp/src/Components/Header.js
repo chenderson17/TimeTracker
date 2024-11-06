@@ -2,12 +2,23 @@ import React from 'react';
 import './Header.css';
 import {useState} from 'react'
 export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPrice}){
+  const [isActive, setIsActive] = useState(false);
+  function signInOnClick(){
+    setIsActive(!isActive);
+  }
   function signIn() {
     if (signInBtnDisplay) {
       return (
-        <a href='/signin'>
-      <button className="signInBtn-header header-btns">Sign In</button>
-      </a>
+        <div className={"login-wrapper"}>
+      <button className={`signInBtn-header header-btns `} onClick={signInOnClick}>Sign In</button>
+      <div className={"login-container"}>
+        <form className={`${isActive ? "open" : "login-form"}`}>
+        <input type="text" placeholder="Username" required={true} />
+      <input type="password" placeholder="Password" required={true}/>
+        <input type="submit" value="Sign In" />
+        </form>
+        </div>
+      </div>
       );
     }
   }
@@ -16,8 +27,8 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
   function signUp() {
     if (signUpBtnDisplay) {
       return(
-      <a href='/signup'>
-     <button className="signUpBtn-header header-btns ">Sign Up</button>
+      <a className="signup-link" href="/signup">
+          <button className="signUpBtn-header header-btns ">Sign Up</button>
       </a>
       )
     }
@@ -41,9 +52,10 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
           <a href="/#contact" className= 'navlink'>Contact</a>
          </li>
          <li>
-          {signIn()}
           {signUp()}
-         </li>
+          {signIn()}
+          </li>
+        
         </ul>
       </nav>
     </header>
