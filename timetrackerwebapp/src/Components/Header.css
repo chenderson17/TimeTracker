@@ -61,10 +61,8 @@ header a {
 }
 
 .login-container {
-  background-color: blue;
   display: block;
-  margin-left:100%;
-  z-index:100;
+  position: relative;
 }
 .login-container input{
   display: block;
@@ -112,6 +110,31 @@ header a {
 .open {
   @include animation(slide 1s);
   display: block;
+  position: absolute;
+  left:44rem;
+  top:0.5rem;
+  background-color:rgba(255, 255, 255);
+  padding:0.5rem 1rem;
+  border:1px solid rgb(0,0,0);
+  border-radius: 1%;
+
+  input{
+      margin:2% 0;
+      padding:0.5rem;
+      border-radius: 2%;
+      outline:none;
+      border:rgb(0,0,0) 1px solid;
+      width: 20rem;
+  }
+  input[type="submit"]{
+    width:100%;
+    background-color:rgb(245, 121, 59);
+    background-color:rgba(221, 57, 57, 0.849);
+    color:rgb(255,255,255);
+    border:none;
+    cursor:pointer;
+    font-weight:500;
+  }
  
 }
 
