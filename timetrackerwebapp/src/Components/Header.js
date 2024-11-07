@@ -10,7 +10,7 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
     if (signInBtnDisplay) {
       return (
         <div className={"login-wrapper"}>
-      <button className={`signInBtn-header header-btns `} onClick={signInOnClick}>Sign In</button>
+      <button className={`${isActive ? "header-selected-btn signInBtn-header header-btns" : "signInBtn-header header-btns"} `} onClick={signInOnClick}>Sign Up</button>
       <div className={"login-container"}>
         <form className={`${isActive ? "open" : "login-form"}`}>
         <input type="text" placeholder="Username" required={true} />
