@@ -10,10 +10,10 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
     if (signInBtnDisplay) {
       return (
         <div className={"login-wrapper"}>
-      <button className={`${isActive ? "header-selected-btn signInBtn-header header-btns" : "signInBtn-header header-btns"} `} onClick={signInOnClick}>Sign Up</button>
+      <button className={`${isActive ? "header-selected-btn signInBtn-header header-btns" : "signInBtn-header header-btns"} `} onClick={signInOnClick}>Sign In</button>
       <div className={"login-container"}>
         <form className={`${isActive ? "open" : "login-form"}`}>
-        <input type="text" placeholder="Username" required={true} />
+        <input type="email" placeholder="Username" required={true} />
       <input type="password" placeholder="Password" required={true}/>
         <input type="submit" value="Sign In" />
         </form>
