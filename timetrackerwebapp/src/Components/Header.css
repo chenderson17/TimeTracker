@@ -146,8 +146,7 @@ header a {
   }
   input[type="submit"]{
     width:100%;
-    background-color:rgb(245, 121, 59);
-    background-color:rgba(221, 57, 57, 0.849);
+    background-color:rgb(56, 51, 102);
     color:rgb(255,255,255);
     border:none;
     cursor:pointer;
