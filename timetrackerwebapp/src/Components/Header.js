@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import {useState} from 'react'
-export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPrice}){
+export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPrice,isSignUp}){
   const [isActive, setIsActive] = useState(false);
   function signInOnClick(){
     setIsActive(!isActive);
@@ -28,7 +28,7 @@ export default function Header({signUpBtnDisplay,signInBtnDisplay, isHome, isPri
     if (signUpBtnDisplay) {
       return(
       <a className="signup-link" href="/signup">
-          <button className="signUpBtn-header header-btns ">Sign Up</button>
+          <button className={`${isSignUp ? "signup-btn-selected header-btns" : "signUpBtn-header header-btns"} `}>Sign Up</button>
       </a>
       )
     }

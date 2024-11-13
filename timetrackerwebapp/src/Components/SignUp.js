@@ -108,7 +108,7 @@ export default function SignUp(){
 
     return(
         <>
-        <Header signUpBtnDisplay={true} signInBtnDisplay={true} isHome={false} isPrice={false} />
+        <Header signUpBtnDisplay={true} signInBtnDisplay={true} isHome={false} isPrice={false} isSignUp={true}  />
         <section className='signup-section'>
         {signupType()}
         <div className='signup-official-container'>

@@ -53,7 +53,7 @@ header a {
  font-weight: 400;
 
 }
-.header-btns:hover, .header-selected-btn{
+ .header-selected-btn, .signInBtn-header:hover{
  background-color:rgb(245, 121, 59);
  background-color: rgb(99, 99, 99);
  color: rgb(255,255,255);
@@ -66,9 +66,10 @@ header a {
   font-weight: 500;
 
 }
-.signUpBtn-header:hover{
+.signUpBtn-header:hover, .signup-btn-selected{
   background-color:rgb(209, 82, 18);
   color:rgb(255,255,255);
+  font-weight:500;
 }
 .signupBtn-selected{
   background-color:rgb(209, 82, 18);
