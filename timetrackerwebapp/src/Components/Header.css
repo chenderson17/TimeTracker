@@ -146,11 +146,13 @@ header a {
   }
   input[type="submit"]{
     width:100%;
-    background-color:rgb(53, 7, 128);
+    background-color:rgb(206, 84, 84);
     color:rgb(255,255,255);
     border:none;
     cursor:pointer;
     font-weight:500;
+    font-size: 900;
+    font-weight: 500;
   }
  
 }
